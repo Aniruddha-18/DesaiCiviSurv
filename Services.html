@@ -1,148 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Services - DESAI CiviSurv</title>
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
-    <link rel="stylesheet" type="text/css" href="mobilescreen.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAI CiviSurv</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS File -->
     <style>
         body {
-            background-color: LightGray;
-            font-family: 'Palatino Linotype', serif;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
         }
         header {
-            background-color: #36454F;
+            background-color: #2c3e50;
             padding: 20px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
         }
         .logo img {
-            width: 15%;
-        }
-        .nav {
-            text-align: right;
-            margin-top: -30px;
-            padding-right: 20px;
+            width: 120px;
         }
         .nav a {
-            font-size: 12.5px;
             background-color: #04AA6D;
-            padding: 5px 10px;
-            color: black;
-            border-radius: 15px;
-            text-decoration: none;
-            margin-left: 5px;
-        }
-        .container {
-            text-align: center;
-            margin: 50px auto;
-            max-width: 800px;
-        }
-        .title {
-            font-size: 45px;
-            color: #0070C0;
-        }
-        .subtitle {
-            font-size: 25px;
-            background-color: #0070C0;
             color: white;
-            padding: 10px;
-            display: inline-block;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 0 5px;
         }
-        .description {
-            font-size: 12px;
-            line-height: 18px;
-            margin-bottom: 50px;
-        }
-        hr {
-            width: 60%;
-            margin-bottom: 50px;
-            border: 1px solid blue;
-        }
-        .marquee-container {
+        .marquee {
+            background-color: yellow;
             color: red;
             font-weight: bold;
-            overflow: hidden;
-            white-space: nowrap;
-            animation: marquee 10s linear infinite;
+            padding: 10px;
         }
-        @keyframes marquee {
-            from { transform: translateX(100%); }
-            to { transform: translateX(-100%); }
+        .container {
+            padding: 50px 20px;
+        }
+        h1 {
+            color: #2980b9;
+            font-size: 40px;
+        }
+        .subtitle {
+            background-color: #0070C0;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+        }
+        .description {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: green;
+            color: black;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
         }
         .services {
-            text-align: center;
-            margin: 0 auto 50px;
-            max-width: 600px;
+            margin-top: 40px;
         }
         .services h2 {
-            font-size: 20px;
             background-color: #0070C0;
-            color: white;
             padding: 10px;
+            display: inline-block;
+            color: white;
+            border-radius: 10px;
         }
         .services ul {
             list-style-type: none;
             padding: 0;
         }
-        .services li {
-            margin: 5px 0;
+        .services ul li {
+            margin: 10px 0;
         }
-        footer {
-            text-align: center;
+        .services ul li a {
             color: white;
-            background-color: #36454F;
-            padding: 20px;
-            font-size: 12px;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="F_logo_dcs.cs.Model.1.jpg" alt="Company Logo">
+            <img src="logo.png" alt="DCS Logo">
+        </div>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact Us</a>
         </div>
     </header>
-    <div class="nav">
-        <a href="index.html">Home</a>
-        <a href="About_us.html">About Us</a>
-        <a href="Services.html">Services</a>
-        <a href="Contact_us.html">Contact Us</a>
-    </div>
+    <div class="marquee">"Engineering is the art of directing the great sources of power in nature"</div>
     <div class="container">
-        <h1 class="title">DESAI CiviSurv</h1>
-        <h2 class="subtitle">Consulting Civil Engineer's & Surveyor's</h2>
-        <p class="description">Our Land Surveying Services Are Precise And Reliable,<br>Helping Clients Define Property Boundaries And Ensure Accurate Land Measurements.</p>
-        <hr>
-        <div class="marquee-container">ENGINEERS LIKE TO SOLVE PROBLEMS. IF THERE ARE NO PROBLEMS HANDILY AVAILABLE, THEY WILL CREATE THEIR OWN PROBLEMS</div>
+        <h1>DESAI CiviSurv</h1>
+        <div class="subtitle">Consulting Civil Engineer's & Surveyor's</div>
+        <p class="description">Civil engineering is a professional discipline that deals with the design, construction, and maintenance of the physical and naturally built environment, including works like roads, bridges, canals, dams, and buildings. Civil engineers ensure that infrastructure is safe, efficient, and sustainable, contributing to urban development and improved living conditions.</p>
+        <p class="description">Surveying is the technique, profession, and science of determining the terrestrial or three-dimensional positions of points and the distances and angles between them. It plays a critical role in civil engineering, construction, and land development by providing accurate data for planning and execution of projects.</p>
+        <a href="#" class="read-more">Read More</a>
+        <div class="services">
+            <h2>Civil Works</h2>
+            <ul>
+                <li><a href="#">2D Plan</a></li>
+                <li><a href="#">3D Plan</a></li>
+                <li><a href="#">Interior Design</a></li>
+                <li><a href="#">Elevation Design</a></li>
+                <li><a href="#">Estimation</a></li>
+                <li><a href="#">Building Permission</a></li>
+            </ul>
+            <h2>Survey Works</h2>
+            <ul>
+                <li><a href="#">Topographical Survey</a></li>
+                <li><a href="#">Total Station Survey</a></li>
+                <li><a href="#">DGPS Survey</a></li>
+                <li><a href="#">Drone Survey</a></li>
+                <li><a href="#">LIDAR Survey</a></li>
+                <li><a href="#">Layout Survey</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="services">
-        <h2>Civil Works</h2>
-        <ul>
-            <li>2D Plan</li>
-            <li>3D Plan</li>
-            <li>Interior Design</li>
-            <li>Elevation Design</li>
-            <li>Estimation</li>
-            <li>Building Permission</li>
-        </ul>
-    </div>
-    <div class="services">
-        <h2>Survey Works</h2>
-        <ul>
-            <li>Topographical Survey</li>
-            <li>Total Station Survey</li>
-            <li>DGPS Survey</li>
-            <li>Drone Survey</li>
-            <li>LIDAR Survey</li>
-            <li>Layout Survey</li>
-        </ul>
-    </div>
-    <footer>
-        <p>&copy; 2023 DESAI CiviSurv. All rights reserved.</p>
-    </footer>
 </body>
 </html>
