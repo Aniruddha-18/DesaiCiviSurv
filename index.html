@@ -5,6 +5,30 @@
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 <link rel="stylesheet" type="text/css" href="mobilescreen.css">
 <title>Civil Engineering</title>
+<style>
+    .marquee {
+        font-size: 18px;
+        font-weight: bold;
+        color: red;
+        background-color: yellow;
+        padding: 10px;
+        border-radius: 10px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+    }
+    .marquee span {
+        display: inline-block;
+        position: absolute;
+        will-change: transform;
+        animation: marqueeAnimation 10s linear infinite;
+    }
+    @keyframes marqueeAnimation {
+        from { transform: translateX(100%); }
+        to { transform: translateX(-100%); }
+    }
+</style>
 </head>
 <body style="background-color:LightGray;">
 
@@ -19,22 +43,14 @@
     <a style="font-size:12.5px; background-color: #04AA6D; padding: 5px 10px; color: black; border-radius: 15px;" href="Contact us.html">Contact us</a>
 </div>
 
-<div style="text-align:center; margin: 50px 300px;"><h1 style="font-size:40px; color:#0070C0; font-family: 'Palatino Linotype', serif;">DESAI CiviSurv</h1></div>
+<div class="marquee">
+    <span>"Engineering is not only study of 45 subjects but it is moral studies of intellectual life." - Prakhar Srivastav</span>
+</div>
 
-<div style="text-align:center; margin: 0px 300px 50px;"><h2 style="font-size:20px; background-color: #0070C0; padding: 10px 25px; color: white; font-family: 'Palatino Linotype', serif;">Consulting Civil Engineer's & Surveyor's</h2></div>
-
-<p style="text-align:center; font-size:16px; margin: 20px 300px; font-family: 'Palatino Linotype', serif;">Civil engineering is a professional discipline that deals with designing, constructing, and maintaining physical structures like roads, bridges, buildings, and water systems. Surveying is an essential part of civil engineering, helping determine land boundaries, topographical mapping, and construction planning with precision.</p>
-
-<div style="text-align:center; margin-bottom: 50px;"><a style="font-size:20px; background-color: #04AA6D; padding: 3px 15px; color: black; border-radius: 15px;" href="https://en.wikipedia.org/wiki/Civil_engineering">Read More</a></div>
-
-<b><hr style="width: 60%; margin-bottom: 50px; color: blue;"></b>
-
-<b><marquee style="color: red;"> ENGINEERS LIKE TO SOLVE PROBLEMS. IF THERE ARE NO PROBLEMS HANDILY AVAILABLE, THEY WILL CREATE THEIR OWN PROBLEMS </marquee></b>
-
-<h2 style="font-size:20px; text-align:center; background-color: #0070C0; color: white; font-family: 'Palatino Linotype', serif;">Visiting Card</h2>
-<div style="display: flex; justify-content: center; flex-wrap: wrap;">
-    <img style="width: 300px; height: 200px; object-fit: cover; margin: 5px;" src="Image 2.jpeg"/>
-    <img style="width: 300px; height: 200px; object-fit: cover; margin: 5px;" src="Image 1.jpeg"/>
+<h2 style="font-size:20px; text-align:center; background-color: #0070C0; color: white; font-family: 'Palatino Linotype', serif;">Visiting card</h2>
+<div style="text-align: center;">
+    <img style="width: 300px; height: 200px; object-fit: cover; margin: 10px;" src="Image 2.jpeg"/>
+    <img style="width: 300px; height: 200px; object-fit: cover; margin: 10px;" src="Image 1.jpeg"/>
 </div>
 
 <h2 style="font-size:20px; text-align:center; background-color: #0070C0; color: white; font-family: 'Palatino Linotype', serif;">Live Pictures of Survey</h2>
