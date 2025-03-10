@@ -1,136 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - DESAI CiviSurv</title>
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
-    <link rel="stylesheet" type="text/css" href="mobilescreen.css">
-    <style>
-        body {
-            background-color: #2C3E50; /* Matches Home Page */
-            color: white;
-            font-family: 'Palatino Linotype';
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #36454F;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .logo img {
-            width: 120px;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 10px;
-            padding: 10px;
-        }
-        nav a {
-            font-size: 14px;
-            background-color: #04AA6D;
-            padding: 10px 20px;
-            color: black;
-            border-radius: 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            background-color: #028a57;
-            color: white;
-        }
-        .banner {
-            background-color: yellow;
-            color: red;
-            padding: 10px;
-            font-weight: bold;
-            font-size: 14px;
-        }
-        h1 {
-            font-size: 45px;
-            color: #0070C0;
-        }
-        h2 {
-            font-size: 22px;
-            background-color: #0070C0;
-            padding: 10px;
-            color: white;
-            display: inline-block;
-            margin-bottom: 15px;
-            border-radius: 5px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            font-size: 16px;
-            margin: 5px 0;
-        }
-        footer {
-            background-color: #36454F;
-            padding: 15px;
-            color: grey;
-            margin-top: 30px;
-        }
-    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="stylesheet" type="text/css" href="mobilescreen.css">
+<title>Services</title>
 </head>
 <body>
-
-<header>
-    <div class="logo">
-        <img src="F_logo_dcs.cs.Model.1.jpg" alt="Logo">
-    </div>
-</header>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="About us.html">About us</a>
-    <a href="Services.html">Services</a>
-    <a href="Contact us.html">Contact us</a>
-</nav>
-
-<div class="banner">
-    "Engineering is the art of directing the great sources of power in nature for the use and convenience of man."
-</div>
-
-<h1>DESAI CiviSurv</h1>
-<h2>Consulting Civil Engineer's & Surveyor's</h2>
-
-<p style="font-size: 14px; line-height: 22px; margin: 20px auto; width: 60%;">
-    Our Land Surveying Services are precise and reliable, helping clients define property boundaries and ensure accurate land measurements.
-</p>
-
-<hr style="width: 60%; margin: 30px auto; border: 1px solid blue;">
-
-<h2>Civil Works</h2>
-<ul>
-    <li>2D Plan</li>
-    <li>3D Plan</li>
-    <li>Interior Design</li>
-    <li>Elevation Design</li>
-    <li>Estimation</li>
-    <li>Building Permission</li>
-</ul>
-
-<h2>Survey Works</h2>
-<ul>
-    <li>Topographical Survey</li>
-    <li>Total Station Survey</li>
-    <li>DGPS Survey</li>
-    <li>Drone Survey</li>
-    <li>LIDAR Survey</li>
-    <li>Layout Survey</li>
-</ul>
-
-<footer>
-    <p>&copy; 2023 DESAI CiviSurv. All rights reserved.</p>
-</footer>
-
+    <header>
+        <div class="logo-container">
+            <img src="F_logo_dcs.cs.Model.1.jpg" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About us.html">About us</a></li>
+                <li><a href="Services.html" class="active">Services</a></li>
+                <li><a href="Contact us.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>DESAI CiviSurv</h1>
+        <h2>Consulting Civil Engineer's & Surveyor's</h2>
+    </section>
+    
+    <p class="description">Our Land Surveying Services Are Precise And Reliable, <br>Helping Clients Define Property Boundaries And Ensure Accurate Land Measurements</p>
+    
+    <hr>
+    
+    <marquee>ENGINEERS LIKE TO SOLVE PROBLEMS. IF THERE ARE NO PROBLEMS HANDILY AVAILABLE, THEY WILL CREATE THEIR OWN PROBLEMS</marquee>
+    
+    <section class="services">
+        <div class="service-box">
+            <h2>Civil Works</h2>
+            <ul>
+                <li>2D Plan</li>
+                <li>3D Plan</li>
+                <li>Interior Design</li>
+                <li>Elevation Design</li>
+                <li>Estimation</li>
+                <li>Building Permission</li>
+            </ul>
+        </div>
+        
+        <div class="service-box">
+            <h2>Survey Works</h2>
+            <ul>
+                <li>Topographical Survey</li>
+                <li>Total Station Survey</li>
+                <li>DGPS Survey</li>
+                <li>Drone Survey</li>
+                <li>LIDAR Survey</li>
+                <li>Layout Survey</li>
+            </ul>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Copyright &copy; 2023</p>
+    </footer>
 </body>
 </html>
