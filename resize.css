@@ -1,5 +1,5 @@
 .resize { 
      width: 150px; /* Set your desired width */ 
-     height: 250px; /* Set your desired height */ 
+     height: 500px; /* Set your desired height */ 
      object-fit: cover; /* Ensures images maintain aspect ratio and fill the container */ 
    } 
