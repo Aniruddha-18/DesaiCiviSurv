@@ -7,7 +7,7 @@
 <title>Civil Engineering</title>
 <style>
     body {
-        background-color: #2C3E50; /* Updated to match DCS logo color */
+        background-color: #2C3E50;
         color: white;
     }
     .marquee-container {
@@ -46,11 +46,24 @@
     .nav-bar a:hover {
         background-color: #028a5e;
     }
+    .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 20px;
+    }
+    .image-container img {
+        width: 250px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
 </style>
 </head>
 <body>
 <header style="background-color: #36454F; padding: 20px; display: flex; justify-content: space-between; align-items: center;"> 
-    <div><img style="width: 15%;" src="F_logo_dcs.cs.Model.1.jpg"></div>    
+    <div><img style="width: 150px;" src="F_logo_dcs.cs.Model.1.jpg"></div>
     <div class="nav-bar">
         <a href="index.html">Home</a>
         <a href="About us.html">About us</a>
@@ -76,7 +89,7 @@
 <b><hr style="width: 60%; margin-bottom: 50px; color: blue;"></b>
 
 <h2 style="font-size:20px; text-align:center; background-color: #0070C0; color: white; font-family: 'Palatino Linotype', serif;">Live Pictures of Survey</h2>
-<div style="display: flex; justify-content: center; flex-wrap: wrap;">
+<div class="image-container">
     <img src="abhi1.jpeg" />
     <img src="abhi2.jpeg" />
     <img src="abhi3.jpeg" />
