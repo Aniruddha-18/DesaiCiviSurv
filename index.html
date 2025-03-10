@@ -7,10 +7,11 @@
     <style>
         /* General Styles */
         body {
-            background-color: #0070C0; /* Updated Background Color to Match "DCS" Letter */
+            background-color: #2C3E50; /* Updated Background Color */
             font-family: 'Palatino Linotype', serif;
             margin: 0;
             padding: 0;
+            color: white;
         }
 
         /* Header Section */
@@ -36,7 +37,7 @@
             font-size: 18px;
             background-color: #04AA6D;
             padding: 8px 15px;
-            color: black;
+            color: white;
             text-decoration: none;
             border-radius: 15px;
             margin: 5px;
@@ -74,13 +75,13 @@
         }
 
         .main-title h1 {
-            font-size: 50px;
+            font-size: 45px; /* Updated to 45px */
             color: white;
             margin-bottom: 10px;
         }
 
         .main-title h2 {
-            font-size: 25px;
+            font-size: 25px; /* Updated to 25px */
             background-color: white;
             padding: 10px;
             color: #0070C0;
@@ -103,10 +104,10 @@
 
         /* Read More Button */
         .read-more {
-            font-size: 20px;
+            font-size: 14px; /* Updated to 14px */
             background-color: #04AA6D;
             padding: 10px 20px;
-            color: black;
+            color: white;
             text-decoration: none;
             border-radius: 15px;
             display: inline-block;
@@ -128,12 +129,13 @@
         .marquee-text {
             display: inline-block;
             font-size: 20px;
-            animation: marqueeScroll 10s linear infinite;
+            animation: marqueeScroll 8s linear infinite alternate;
         }
 
         @keyframes marqueeScroll {
-            from { transform: translateX(100%); }
-            to { transform: translateX(-100%); }
+            0% { transform: translateX(100%); }
+            50% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
         }
 
         /* Survey Images Section */
@@ -207,7 +209,7 @@
 
     <!-- ENHANCED MARQUEE -->
     <div class="marquee-container">
-        <p class="marquee-text">ENGINEERS LIKE TO SOLVE PROBLEMS. IF THERE ARE NO PROBLEMS, THEY CREATE THEIR OWN.</p>
+        <p class="marquee-text">"Success is not the key to happiness. Happiness is the key to success."</p>
     </div>
 
     <!-- Survey Images Section -->
