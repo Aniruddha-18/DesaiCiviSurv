@@ -6,6 +6,9 @@
     <title>Civil Engineering - DESAI CiviSurv</title>
 </head>
 <body style="background-color:LightGray; font-family:Arial, sans-serif; margin: 0; padding: 0;">
+    <style>
+    body {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 
     <!-- HEADER SECTION -->
     <header style="background-color: #36454F; padding: 20px; text-align: center;">
@@ -39,18 +42,35 @@
 
     <!-- QUOTE MARQUEE -->
     <div style="overflow: hidden; white-space: nowrap; background-color: red; color: white; font-weight: bold; padding: 10px; text-align: center;">
-        <span style="animation: marquee 10s linear infinite;">ENGINEERS LIKE TO SOLVE PROBLEMS. IF THERE ARE NO PROBLEMS, THEY CREATE THEIR OWN.</span>
-    </div>
+    <span class="marquee-text">ENGINEERS LIKE TO SOLVE PROBLEMS. IF THERE ARE NO PROBLEMS, THEY CREATE THEIR OWN.</span>
+</div>
 
-    <!-- Visiting Card Section -->
-    <h2 style="font-size:30px; text-align:center; background-color: #0070C0; color: white; padding: 10px;">Visiting Card</h2>
-    <div style="text-align: center;">
-        <img src="Image 2.jpeg" style="width: 30%; max-width: 200px; margin-right: 20px;">
-        <img src="Image 1.jpeg" style="width: 30%; max-width: 200px;">
-    </div>
+<style>
+    .marquee-text {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: bold;
+        animation: marqueeMove 10s linear infinite, colorChange 5s infinite alternate, bounce 1.5s infinite alternate;
+    }
 
-    <!-- Survey Images Section -->
-   <!-- Survey Images Section -->
+    @keyframes marqueeMove {
+        from { transform: translateX(100%); }
+        to { transform: translateX(-100%); }
+    }
+
+    @keyframes colorChange {
+        0% { color: yellow; }
+        50% { color: white; }
+        100% { color: cyan; }
+    }
+
+    @keyframes bounce {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-5px); }
+    }
+</style>
+
+         <!-- Survey Images Section -->
 <h2 style="font-size:30px; text-align:center; background-color: #0070C0; color: white; padding: 10px;">Live Pictures of Survey</h2>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
     <img src="abhi1.jpeg" class="animated-image">
@@ -106,6 +126,7 @@
             from { transform: translateX(100%); }
             to { transform: translateX(-100%); }
         }
+    </style>
     </style>
 
 </body>
