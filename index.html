@@ -4,94 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Civil Engineering - DESAI CiviSurv</title>
-</head>
-<body style="background-color:LightGray; font-family:'Palatino Linotype', serif; margin: 0; padding: 0;">
-
-    <!-- HEADER SECTION -->
-    <header style="background-color: #36454F; padding: 20px; text-align: center;">
-        <img src="F_logo_dcs.cs.Model.1.jpg" style="width: 120px;">
-    </header>
-
-    <!-- NAVIGATION MENU -->
-    <nav style="text-align: center; margin-top: 10px;">
-        <a href="index.html" style="font-size:20px; background-color: #04AA6D; padding: 10px 20px; color: black; text-decoration: none; border-radius: 15px; margin: 5px; display: inline-block;">Home</a>
-        <a href="About us.html" style="font-size:20px; background-color: #04AA6D; padding: 10px 20px; color: black; text-decoration: none; border-radius: 15px; margin: 5px; display: inline-block;">About us</a>
-        <a href="Services.html" style="font-size:20px; background-color: #04AA6D; padding: 10px 20px; color: black; text-decoration: none; border-radius: 15px; margin: 5px; display: inline-block;">Services</a>
-        <a href="Contact us.html" style="font-size:20px; background-color: #04AA6D; padding: 10px 20px; color: black; text-decoration: none; border-radius: 15px; margin: 5px; display: inline-block;">Contact us</a>
-    </nav>
-
-    <!-- MAIN TITLE -->
-    <div style="text-align:center; margin-top: 40px;">
-        <h1 style="font-size:50px; color:#0070C0; margin-bottom: 10px;">DESAI CiviSurv</h1>
-        <h2 style="font-size:25px; background-color: #0070C0; padding: 10px; color: white; display: inline-block;">Consulting Civil Engineer's & Surveyor's</h2>
-    </div>
-
-    <!-- DESCRIPTION SECTION -->
-    <div style="max-width: 800px; margin: 50px auto; text-align:center;">
-        <p style="font-size: 17px; line-height: 1.6;">
-            A Civil Engineer designs, builds, and maintains infrastructure projects and systems in both the public and private sectors. These engineers ensure that buildings, roads, bridges, and water supply systems are safe and sustainable.
-        </p>
-        <p style="font-size: 17px; line-height: 1.6;">
-            A Surveyor measures and maps the Earth's physical features. They use specialized tools to determine distances, angles, elevations, and boundaries, crucial for construction and land development.
-        </p>
-        <a href="https://en.wikipedia.org/wiki/Civil_engineering" style="font-size:20px; background-color: #04AA6D; padding: 10px 20px; color: black; text-decoration: none; border-radius: 15px;">Read More</a>
-    </div>
-
-    <!-- ENHANCED MARQUEE -->
-    <div class="marquee-container">
-        <p class="marquee-text">ENGINEERS LIKE TO SOLVE PROBLEMS. IF THERE ARE NO PROBLEMS, THEY CREATE THEIR OWN.</p>
-    </div>
-
-    <!-- Survey Images Section -->
-    <h2 style="font-size:30px; text-align:center; background-color: #0070C0; color: white; padding: 10px;">Live Pictures of Survey</h2>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
-        <img src="abhi1.jpeg" class="animated-image">
-        <img src="abhi3.jpeg" class="animated-image">
-        <img src="abhi4.jpeg" class="animated-image">
-        <img src="abhi6.jpeg" class="animated-image">
-        <img src="abhi7.jpeg" class="animated-image">
-        <img src="abhi8.jpeg" class="animated-image">
-        <img src="abhi9.jpeg" class="animated-image">
-        <img src="abhi10.jpeg" class="animated-image">
-        <img src="abhi11.jpeg" class="animated-image">
-        <img src="abhi2.jpeg" class="animated-image">
-        <img src="abhi12.jpeg" class="animated-image">
-        <img src="abhi13.jpeg" class="animated-image">
-        <img src="abhi15.jpeg" class="animated-image">
-        <img src="abhi16.jpeg" class="animated-image">
-        <img src="abhi14.jpeg" class="animated-image">
-        <img src="abhi5.jpeg" class="animated-image">
-    </div>
-
-    <!-- Footer Section -->
-    <footer style="text-align: center; color: white; background-color: #36454F; padding: 20px; margin-top: 50px;">
-        <p>&copy; 2023 DESAI CiviSurv. All Rights Reserved.</p>
-    </footer>
-
-    <!-- Styles for Animations -->
     <style>
-        /* Image Animations */
-        .animated-image {
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
+        /* General Styles */
+        body {
+            background-color: #0070C0; /* Updated Background Color to Match "DCS" Letter */
+            font-family: 'Palatino Linotype', serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #36454F;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            width: 100px;
+            margin-left: 20px; /* Logo Positioned at the Left */
+        }
+
+        /* Navigation Menu */
+        nav {
+            margin-right: 20px;
+        }
+
+        nav a {
+            font-size: 18px;
+            background-color: #04AA6D;
+            padding: 8px 15px;
+            color: black;
+            text-decoration: none;
             border-radius: 15px;
-            transition: transform 0.4s ease, opacity 1s ease-in-out;
-            opacity: 0;
-            animation: fadeIn 1.5s forwards;
+            margin: 5px;
+            display: inline-block;
         }
 
-        .animated-image:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+        /* Responsive Navigation */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            header img {
+                margin: 10px auto;
+            }
+
+            nav {
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            nav a {
+                display: block;
+                margin: 5px auto;
+                width: 50%;
+                text-align: center;
+            }
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        /* Main Title */
+        .main-title {
+            text-align: center;
+            margin-top: 40px;
         }
 
-        /* Enhanced Marquee Animation */
+        .main-title h1 {
+            font-size: 50px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .main-title h2 {
+            font-size: 25px;
+            background-color: white;
+            padding: 10px;
+            color: #0070C0;
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+        /* Description */
+        .description {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            color: white;
+        }
+
+        .description p {
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        /* Read More Button */
+        .read-more {
+            font-size: 20px;
+            background-color: #04AA6D;
+            padding: 10px 20px;
+            color: black;
+            text-decoration: none;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        /* Marquee Animation */
         .marquee-container {
             width: 100%;
             overflow: hidden;
@@ -113,7 +135,106 @@
             from { transform: translateX(100%); }
             to { transform: translateX(-100%); }
         }
+
+        /* Survey Images Section */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .image-gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: transform 0.4s ease, opacity 1s ease-in-out;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            color: white;
+            background-color: #36454F;
+            padding: 20px;
+            margin-top: 50px;
+        }
     </style>
+</head>
+<body>
+
+    <!-- HEADER SECTION -->
+    <header>
+        <img src="F_logo_dcs.cs.Model.1.jpg" alt="Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="About us.html">About us</a>
+            <a href="Services.html">Services</a>
+            <a href="Contact us.html">Contact us</a>
+        </nav>
+    </header>
+
+    <!-- MAIN TITLE -->
+    <div class="main-title">
+        <h1>DESAI CiviSurv</h1>
+        <h2>Consulting Civil Engineer's & Surveyor's</h2>
+    </div>
+
+    <!-- DESCRIPTION SECTION -->
+    <div class="description">
+        <p>
+            A Civil Engineer designs, builds, and maintains infrastructure projects and systems in both the public and private sectors. These engineers ensure that buildings, roads, bridges, and water supply systems are safe and sustainable.
+        </p>
+        <p>
+            A Surveyor measures and maps the Earth's physical features. They use specialized tools to determine distances, angles, elevations, and boundaries, crucial for construction and land development.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Civil_engineering" class="read-more">Read More</a>
+    </div>
+
+    <!-- ENHANCED MARQUEE -->
+    <div class="marquee-container">
+        <p class="marquee-text">ENGINEERS LIKE TO SOLVE PROBLEMS. IF THERE ARE NO PROBLEMS, THEY CREATE THEIR OWN.</p>
+    </div>
+
+    <!-- Survey Images Section -->
+    <h2 style="text-align:center; background-color: white; color: #0070C0; padding: 10px;">Live Pictures of Survey</h2>
+    <div class="image-gallery">
+        <img src="abhi1.jpeg">
+        <img src="abhi3.jpeg">
+        <img src="abhi4.jpeg">
+        <img src="abhi6.jpeg">
+        <img src="abhi7.jpeg">
+        <img src="abhi8.jpeg">
+        <img src="abhi9.jpeg">
+        <img src="abhi10.jpeg">
+        <img src="abhi11.jpeg">
+        <img src="abhi2.jpeg">
+        <img src="abhi12.jpeg">
+        <img src="abhi13.jpeg">
+        <img src="abhi15.jpeg">
+        <img src="abhi16.jpeg">
+        <img src="abhi14.jpeg">
+        <img src="abhi5.jpeg">
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 DESAI CiviSurv. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
