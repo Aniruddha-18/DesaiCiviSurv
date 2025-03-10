@@ -11,31 +11,45 @@
             color: white;
             font-family: 'Palatino Linotype';
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
         header {
             background-color: #36454F;
             padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo img {
+            width: 120px;
         }
         nav {
-            margin-top: -20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+            padding: 10px;
         }
         nav a {
             font-size: 14px;
             background-color: #04AA6D;
-            padding: 8px 15px;
+            padding: 10px 20px;
             color: black;
             border-radius: 15px;
             text-decoration: none;
-            margin: 5px;
+            font-weight: bold;
         }
         nav a:hover {
             background-color: #028a57;
+            color: white;
         }
         .banner {
             background-color: yellow;
             color: red;
             padding: 10px;
             font-weight: bold;
+            font-size: 14px;
         }
         h1 {
             font-size: 45px;
@@ -48,6 +62,7 @@
             color: white;
             display: inline-block;
             margin-bottom: 15px;
+            border-radius: 5px;
         }
         ul {
             list-style-type: none;
@@ -68,8 +83,8 @@
 <body>
 
 <header>
-    <div style="text-align:left;">
-        <img style="width: 120px;" src="F_logo_dcs.cs.Model.1.jpg">
+    <div class="logo">
+        <img src="F_logo_dcs.cs.Model.1.jpg" alt="Logo">
     </div>
 </header>
 
