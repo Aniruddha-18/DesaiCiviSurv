@@ -1,58 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="mystyle.css">
-<link rel="stylesheet" type="text/css" href="mobilescreen.css">
-<title>Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Services - DESAI CiviSurv</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" type="text/css" href="mobilescreen.css">
+    <style>
+        body {
+            background-color: LightGray;
+            font-family: 'Palatino Linotype', serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #36454F;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 15%;
+        }
+        .nav {
+            text-align: right;
+            margin-top: -30px;
+            padding-right: 20px;
+        }
+        .nav a {
+            font-size: 12.5px;
+            background-color: #04AA6D;
+            padding: 5px 10px;
+            color: black;
+            border-radius: 15px;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+        .container {
+            text-align: center;
+            margin: 50px auto;
+            max-width: 800px;
+        }
+        .title {
+            font-size: 45px;
+            color: #0070C0;
+        }
+        .subtitle {
+            font-size: 25px;
+            background-color: #0070C0;
+            color: white;
+            padding: 10px;
+            display: inline-block;
+        }
+        .description {
+            font-size: 12px;
+            line-height: 18px;
+            margin-bottom: 50px;
+        }
+        hr {
+            width: 60%;
+            margin-bottom: 50px;
+            border: 1px solid blue;
+        }
+        .marquee-container {
+            color: red;
+            font-weight: bold;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+        .services {
+            text-align: center;
+            margin: 0 auto 50px;
+            max-width: 600px;
+        }
+        .services h2 {
+            font-size: 20px;
+            background-color: #0070C0;
+            color: white;
+            padding: 10px;
+        }
+        .services ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .services li {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            color: white;
+            background-color: #36454F;
+            padding: 20px;
+            font-size: 12px;
+        }
+    </style>
 </head>
-<body style="background-color:LightGray;">
-
-<header style="background-color: #36454F; padding: 20px;"> 
-
-<div style="text-align:left; margin-below: 40px;"><img style="width: 15%;" src="F_logo_dcs.cs.Model.1.jpg"></div>    
-
-</header>
-
-<div style="text-align:right; margin-top: -30px;">
-<a style="font-size:12.5px; background-color: #04AA6D; padding: 05px 10px 05px 10px; color: black; padding-right: 10px; border-radius: 15px;" href="index.html">Home</a>
-<a style="font-size:12.5px; background-color: #04AA6D; padding: 05px 10px 05px 10px; color: black; padding-right: 10px; border-radius: 15px;" href="About us.html">About us</a>
-<a style="font-size:12.5px; background-color: #04AA6D; padding: 05px 10px 05px 10px; color: black; padding-right: 10px; border-radius: 15px;" href="Services.html">Services</a>
-<a style="font-size:12.5px; background-color: #04AA6D; padding: 05px 10px 05px 10px; color: black; padding-right: 10px; border-radius: 15px;" href="Contact us.html">Contact us</a>
-</div>
-
-<div style="text-align:center; margin-right: 300px; margin-left: 300px; margin-top: 50px;"><h1 style="font-size:45px; text-align:center; color:#0070C0; font-family: 'Palatino Linotype';">DESAI CiviSurv</h1></div>
-
-<div style="text-align:center; margin-right: 300px; margin-left: 300px; margin-below: -10px;"><h2 style="font-size:25px; text-align:center; background-color: #0070C0; padding: 10px 25px 10px 25px; color: white; padding-right: 20px; font-family: 'Palatino Linotype';">Consulting Civil Engineer's & Surveyor's</h2></div>
-
-<p style="font-size: 12px; text-align:center; line-height: 18px; margin-bottom: 50px; margin-top: 50px; font-family: 'Palatino Linotype'; ">Our Land Surveying Services Are Precise And Reliable, <br>Helping Clients Define Property Boundaries And Ensure Accurate Land Measurements</p>
-<b><hr style="width: 60%; margin-bottom: 50px; color: blue;"></b>
-
-<b><marquee style="color: red;"> ENGINEERS LIKE TO SOLVE PROBLEMS. IF THERE ARE NO PROBLEMS HANDILY AVAILABLE, THEY WILL CREATE THEIR OWN PROBLEMS </marquee></b>
-
-<div style="text-align:center; margin-right: 200px; margin-left: 200px;"><h2 style="font-size:20px; text-align:center; background-color: #0070C0; padding: 05px 15px 05px 10px; color: white; padding-right: 10px;">Civil Works</h2>
-<ul><li>2D Plan</li>
-<li>3D Plan</li>
-<li>Interior Design</li>
-<li>Elevation Design</li>
-<li>Estimation</li>
-<li>Buliding Permission</li>
-</ul>
-</div>
-
-<div style="text-align:center; margin-right: 200px; margin-left: 200px;"><h2 style="font-size:20px; text-align:center; background-color: #0070C0; padding: 10px 25px 10px 25px; color: white; padding-right: 20px;">Survey Works</h2>
-<ul><li>Topographical Survey</li>
-<li>Total Station Survey</li>
-<li>DGPS Survey</li>
-<li>Drone Survey</li>
-<li>LIDAR Survey</li>
-<li>Layout Survey</li>
-</ul>
-</div>
-<footer style="text-align: center; color: grey; background-color: #36454F; padding: 20px;"> 
-
-    <p style="font-size: 12px";>Copyright &copy; 2023</p> 
-
-</footer>
+<body>
+    <header>
+        <div class="logo">
+            <img src="F_logo_dcs.cs.Model.1.jpg" alt="Company Logo">
+        </div>
+    </header>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="About_us.html">About Us</a>
+        <a href="Services.html">Services</a>
+        <a href="Contact_us.html">Contact Us</a>
+    </div>
+    <div class="container">
+        <h1 class="title">DESAI CiviSurv</h1>
+        <h2 class="subtitle">Consulting Civil Engineer's & Surveyor's</h2>
+        <p class="description">Our Land Surveying Services Are Precise And Reliable,<br>Helping Clients Define Property Boundaries And Ensure Accurate Land Measurements.</p>
+        <hr>
+        <div class="marquee-container">ENGINEERS LIKE TO SOLVE PROBLEMS. IF THERE ARE NO PROBLEMS HANDILY AVAILABLE, THEY WILL CREATE THEIR OWN PROBLEMS</div>
+    </div>
+    <div class="services">
+        <h2>Civil Works</h2>
+        <ul>
+            <li>2D Plan</li>
+            <li>3D Plan</li>
+            <li>Interior Design</li>
+            <li>Elevation Design</li>
+            <li>Estimation</li>
+            <li>Building Permission</li>
+        </ul>
+    </div>
+    <div class="services">
+        <h2>Survey Works</h2>
+        <ul>
+            <li>Topographical Survey</li>
+            <li>Total Station Survey</li>
+            <li>DGPS Survey</li>
+            <li>Drone Survey</li>
+            <li>LIDAR Survey</li>
+            <li>Layout Survey</li>
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2023 DESAI CiviSurv. All rights reserved.</p>
+    </footer>
 </body>
 </html>
