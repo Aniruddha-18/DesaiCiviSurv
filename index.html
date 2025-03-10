@@ -50,17 +50,50 @@
     </div>
 
     <!-- Survey Images Section -->
-    <h2 style="font-size:30px; text-align:center; background-color: #0070C0; color: white; padding: 10px;">Live Pictures of Survey</h2>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
-        <img src="abhi1.jpeg" style="width: 300px; height: 200px; object-fit: cover;">
-        <img src="abhi3.jpeg" style="width: 300px; height: 200px; object-fit: cover;">
-        <img src="abhi4.jpeg" style="width: 300px; height: 200px; object-fit: cover;">
-        <img src="abhi6.jpeg" style="width: 300px; height: 200px; object-fit: cover;">
-        <img src="abhi7.jpeg" style="width: 300px; height: 200px; object-fit: cover;">
-        <img src="abhi8.jpeg" style="width: 300px; height: 200px; object-fit: cover;">
-        <img src="abhi9.jpeg" style="width: 300px; height: 200px; object-fit: cover;">
-        <img src="abhi10.jpeg" style="width: 300px; height: 200px; object-fit: cover;">
-    </div>
+   <!-- Survey Images Section -->
+<h2 style="font-size:30px; text-align:center; background-color: #0070C0; color: white; padding: 10px;">Live Pictures of Survey</h2>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
+    <img src="abhi1.jpeg" class="animated-image">
+    <img src="abhi3.jpeg" class="animated-image">
+    <img src="abhi4.jpeg" class="animated-image">
+    <img src="abhi6.jpeg" class="animated-image">
+    <img src="abhi7.jpeg" class="animated-image">
+    <img src="abhi8.jpeg" class="animated-image">
+    <img src="abhi9.jpeg" class="animated-image">
+    <img src="abhi10.jpeg" class="animated-image">
+    <img src="abhi11.jpeg" class="animated-image">
+    <img src="abhi2.jpeg" class="animated-image">
+    <img src="abhi12.jpeg" class="animated-image">
+    <img src="abhi13.jpeg" class="animated-image">
+    <img src="abhi15.jpeg" class="animated-image">
+    <img src="abhi16.jpeg" class="animated-image">
+    <img src="abhi14.jpeg" class="animated-image">
+    <img src="abhi5.jpeg" class="animated-image">
+</div>
+
+<!-- Image Animations -->
+<style>
+    .animated-image {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 15px;
+        transition: transform 0.4s ease, opacity 1s ease-in-out;
+        opacity: 0;
+        animation: fadeIn 1.5s forwards;
+    }
+
+    .animated-image:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+</style>
+
 
     <!-- Footer Section -->
     <footer style="text-align: center; color: white; background-color: #36454F; padding: 20px; margin-top: 50px;">
