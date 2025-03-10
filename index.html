@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Desai CiviSurv - Consulting Civil Engineers & Surveyors providing expert solutions in construction, surveying, and infrastructure development.">
-    <title>home</title>
+    <title>Services - Civil Engineering</title>
     <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" type="text/css" href="mobilescreen.css">
     <style>
         body {
             background-color: #2C3E50;
             color: white;
             font-family: Arial, sans-serif;
             margin: 0;
-            text-align: center;
         }
         header {
             background-color: #36454F;
@@ -38,47 +38,53 @@
         }
         .marquee-container {
             width: 100%;
+            overflow: hidden;
             background-color: #FFD700;
             padding: 10px 0;
         }
         .marquee-content {
+            display: inline-block;
             font-size: 18px;
             font-weight: bold;
             color: red;
+            animation: marqueeAnimation 10s linear infinite;
         }
-        .content {
-            padding: 50px 10%;
+        @keyframes marqueeAnimation {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
         }
-        h1 {
-            font-size: 40px;
-            color: #0070C0;
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
         }
-        .blue-box {
-            background-color: #0070C0;
-            color: white;
-            padding: 15px;
-            font-size: 20px;
-            display: inline-block;
-            border-radius: 5px;
-        }
-        .read-more {
-            font-size: 20px;
-            background-color: #04AA6D;
-            padding: 8px 15px;
-            color: black;
-            border-radius: 15px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 15px;
-        }
-        .read-more:hover {
-            background-color: #028a5e;
+        .image-container img {
+            width: 250px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
         }
         footer {
             text-align: center;
             color: grey;
             background-color: #36454F;
             padding: 20px;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-bar {
+                flex-direction: column;
+                align-items: center;
+            }
+            .image-container img {
+                width: 100%;
+                height: auto;
+            }
         }
     </style>
 </head>
@@ -87,9 +93,9 @@
         <img style="width: 150px;" src="F_logo_dcs.cs.Model.1.jpg" alt="Company Logo">
         <nav class="nav-bar">
             <a href="index.html">Home</a>
-            <a href="about us.html">About Us</a>
-            <a href="Services.html">Services</a>
-            <a href="contact us.html">Contact Us</a>
+            <a href="about-us.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact-us.html">Contact Us</a>
         </nav>
     </header>
 
@@ -97,18 +103,34 @@
         <div class="marquee-content"> "Engineering is the art of directing the great sources of power in nature for the use and convenience of man." - Thomas Tredgold</div>
     </div>
 
-    <div class="content">
-        <h1>DESAI CiviSurv</h1>
-        <div class="blue-box">Consulting Civil Engineer's & Surveyor's</div>
-        <p>
-            Civil engineering is a professional discipline that deals with the design, construction, and maintenance of the built environment, 
-            including roads, bridges, canals, and buildings. Our team ensures infrastructure is safe, efficient, and sustainable.
-        </p>
-        <p>
-            Surveying is the technique and science of determining positions, distances, and angles between points. It plays a critical role in 
-            civil engineering, construction, and land development.
-        </p>
-        <a class="read-more" href="https://en.wikipedia.org/wiki/Civil_engineering">Read More</a>
+    <div style="text-align:center; margin: 50px 10%;">
+        <h1 style="font-size:40px; color:#0070C0;">Our Services</h1>
+        <h2 style="font-size:20px; background-color: #0070C0; padding: 10px; color: white;">Consulting Civil Engineering & Surveying</h2>
+        <p>We provide a range of civil engineering and surveying services to ensure infrastructure safety, efficiency, and sustainability.</p>
+        <p>Our expert team delivers top-quality solutions for construction, land measurement, and project planning.</p>
+        <a style="font-size:20px; background-color: #04AA6D; padding: 3px 15px; color: black; border-radius: 15px;" href="https://en.wikipedia.org/wiki/Civil_engineering">Read More</a>
+    </div>
+
+    <hr style="width: 60%; margin-bottom: 50px; color: blue;">
+
+    <h2 style="text-align:center; background-color: #0070C0; color: white;">Live Pictures of Survey</h2>
+    <div class="image-container">
+        <img src="abhi1.jpeg" alt="Surveying Image 1">
+        <img src="abhi2.jpeg" alt="Surveying Image 2">
+        <img src="abhi3.jpeg" alt="Surveying Image 3">
+        <img src="abhi4.jpeg" alt="Surveying Image 4">
+        <img src="abhi5.jpeg" alt="Surveying Image 5">
+        <img src="abhi6.jpeg" alt="Surveying Image 6">
+        <img src="abhi7.jpeg" alt="Surveying Image 7">
+        <img src="abhi8.jpeg" alt="Surveying Image 8">
+        <img src="abhi9.jpeg" alt="Surveying Image 9">
+        <img src="abhi10.jpeg" alt="Surveying Image 10">
+        <img src="abhi11.jpeg" alt="Surveying Image 11">
+        <img src="abhi12.jpeg" alt="Surveying Image 12">
+        <img src="abhi13.jpeg" alt="Surveying Image 13">
+        <img src="abhi14.jpeg" alt="Surveying Image 14">
+        <img src="abhi15.jpeg" alt="Surveying Image 15">
+        <img src="abhi16.jpeg" alt="Surveying Image 16">
     </div>
 
     <footer>
