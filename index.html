@@ -13,6 +13,94 @@
             padding: 0;
             color: white;
         }
+        /* Survey Images Section */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: transform 0.4s ease, opacity 1s ease-in-out;
+            cursor: pointer;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Lightbox (Modal) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            text-align: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 80vh;
+            margin-top: 50px;
+            border-radius: 10px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .close:hover {
+            color: red;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev:hover, .next:hover {
+            background: rgba(255, 255, 255, 0.5);
+            color: black;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
 
         /* Header Section */
         header {
@@ -284,17 +372,7 @@
             </div>
         </nav>
     </header>
-    <script>
-        function toggleMenu() {
-            const mobileNav = document.getElementById('mobileNav');
-            if (mobileNav.style.display === 'flex') {
-                mobileNav.style.display = 'none';
-            } else {
-                mobileNav.style.display = 'flex';
-            }
-        }
-    </script>
-
+    
     <!-- MAIN TITLE -->
     <div class="main-title">
         <h1>DESAI CiviSurv</h1>
@@ -320,28 +398,76 @@
     <!-- Survey Images Section -->
     <h2 style="text-align:center; background-color: white; color: #0070C0; padding: 10px;">Live Pictures of Survey</h2>
     <div class="image-gallery">
-        <img src="abhi1.jpeg">
-        <img src="abhi3.jpeg">
-        <img src="abhi4.jpeg">
-        <img src="abhi6.jpeg">
-        <img src="abhi7.jpeg">
-        <img src="abhi8.jpeg">
-        <img src="abhi9.jpeg">
-        <img src="abhi10.jpeg">
-        <img src="abhi11.jpeg">
-        <img src="abhi2.jpeg">
-        <img src="abhi12.jpeg">
-        <img src="abhi13.jpeg">
-        <img src="abhi15.jpeg">
-        <img src="abhi16.jpeg">
-        <img src="abhi14.jpeg">
-        <img src="abhi5.jpeg">
+        <img src="abhi1.jpeg" onclick="openModal(0)">
+        <img src="abhi3.jpeg" onclick="openModal(1)">
+        <img src="abhi4.jpeg" onclick="openModal(2)">
+        <img src="abhi6.jpeg" onclick="openModal(3)">
+        <img src="abhi7.jpeg" onclick="openModal(4)">
+        <img src="abhi8.jpeg" onclick="openModal(5)">
+        <img src="abhi9.jpeg" onclick="openModal(6)">
+        <img src="abhi10.jpeg" onclick="openModal(7)">
+        <img src="abhi11.jpeg" onclick="openModal(8)">
+        <img src="abhi2.jpeg" onclick="openModal(9)">
+        <img src="abhi12.jpeg" onclick="openModal(10)">
+        <img src="abhi13.jpeg" onclick="openModal(11)">
+        <img src="abhi15.jpeg" onclick="openModal(12)">
+        <img src="abhi16.jpeg" onclick="openModal(13)">
+        <img src="abhi14.jpeg" onclick="openModal(14)">
+        <img src="abhi5.jpeg" onclick="openModal(15)">
+    </div>
+    
+<!-- Lightbox Modal -->
+    <div id="lightboxModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+        <img id="modalImage" src="">
+        <span class="next" onclick="changeImage(1)">&#10095;</span>
     </div>
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2023 DESAI CiviSurv. All Rights Reserved.</p>
     </footer>
+    
+    <script>
+        function toggleMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileNav.style.display === 'flex') {
+                mobileNav.style.display = 'none';
+            } else {
+                mobileNav.style.display = 'flex';
+            }
+        }
+    </script>
+    
+<!-- JavaScript for Lightbox -->
+    <script>
+        let currentIndex = 0;
+        const images = [
+            "abhi1.jpeg", "abhi3.jpeg", "abhi4.jpeg", "abhi6.jpeg", "abhi7.jpeg", 
+            "abhi8.jpeg", "abhi9.jpeg", "abhi10.jpeg", "abhi11.jpeg", "abhi2.jpeg", 
+            "abhi12.jpeg", "abhi13.jpeg", "abhi15.jpeg", "abhi16.jpeg", "abhi14.jpeg", "abhi5.jpeg"
+        ];
 
+        function openModal(index) {
+            currentIndex = index;
+            document.getElementById("modalImage").src = images[currentIndex];
+            document.getElementById("lightboxModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("lightboxModal").style.display = "none";
+        }
+
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            } else if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+            document.getElementById("modalImage").src = images[currentIndex];
+        }
+    </script>
 </body>
 </html>
