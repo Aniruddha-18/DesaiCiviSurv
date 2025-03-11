@@ -106,18 +106,32 @@
             border-radius: 10px;
         }
 
-        /* Description */
-        .description {
+       .description {
             max-width: 800px;
             margin: 50px auto;
             text-align: center;
             color: white;
-            padding: 0 20px;
-        }
-
-        .description p {
+            padding: 20px;
             font-size: 17px;
             line-height: 1.6;
+            border-radius: 15px;
+            border: 3px solid transparent;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+            position: relative;
+            animation: glowing-border 2s infinite alternate;
+        }
+
+        @keyframes glowing-border {
+            0% {
+                box-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 15px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 0, 255, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 15px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 0, 255, 0.7), 0 0 25px rgba(255, 0, 0, 0.7);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(0, 0, 255, 0.7), 0 0 25px rgba(255, 0, 0, 0.7), 0 0 30px rgba(0, 255, 0, 0.7);
+            }
         }
 
         /* Read More Button */
