@@ -21,6 +21,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
 
         header img {
@@ -57,22 +58,7 @@
             box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5);
         }
 
-        nav a::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.2);
-            transition: all 0.4s;
-        }
-
-        nav a:hover::before {
-            left: 100%;
-        }
-
-        /* Responsive Navigation */
+        /* Responsive Design */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -86,12 +72,14 @@
             nav {
                 margin-top: 10px;
                 text-align: center;
+                width: 100%;
             }
 
             nav a {
                 display: block;
                 margin: 10px auto;
-                width: 60%;
+                width: 80%;
+                text-align: center;
             }
         }
 
@@ -99,6 +87,7 @@
         .main-title {
             text-align: center;
             margin-top: 40px;
+            padding: 0 20px;
         }
 
         .main-title h1 {
@@ -122,6 +111,7 @@
             margin: 50px auto;
             text-align: center;
             color: white;
+            padding: 0 20px;
         }
 
         .description p {
@@ -158,8 +148,9 @@
         }
 
         .image-gallery img {
-            width: 300px;
-            height: 200px;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
             object-fit: cover;
             border-radius: 15px;
             transition: transform 0.4s ease, opacity 1s ease-in-out;
@@ -175,29 +166,6 @@
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
-        }
-
-        /* Marquee Animation */
-        .marquee-container {
-            background: white;
-            color: #0070C0;
-            font-size: 20px;
-            font-weight: bold;
-            padding: 10px;
-            overflow: hidden;
-            white-space: nowrap;
-            width: 100%;
-            text-align: center;
-        }
-
-        .marquee-text {
-            display: inline-block;
-            animation: marquee 10s linear infinite;
-        }
-
-        @keyframes marquee {
-            from { transform: translateX(100%); }
-            to { transform: translateX(-100%); }
         }
 
         /* Footer */
@@ -242,7 +210,7 @@
 
     <!-- MARQUEE -->
     <div class="marquee-container">
-        <p class="marquee-text">"Innovation distinguishes between a leader and a follower."</p>
+        <p class="marquee-text">"Success is not the key to happiness. Happiness is the key to success."</p>
     </div>
 
     <!-- Survey Images Section -->
