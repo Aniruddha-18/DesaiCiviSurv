@@ -51,11 +51,6 @@
             margin: 20px auto;
             display: inline-block;
         }
-        .contact-details {
-            text-align: center;
-            font-size: 14px;
-            margin: 40px 0;
-        }
         .contact-box {
             width: 60%;
             margin: auto;
@@ -64,16 +59,6 @@
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             text-align: left;
-        }
-        .contact-box h3 {
-            color: #0070C0;
-        }
-        .contact-box p {
-            font-size: 14px;
-            margin: 10px 0;
-        }
-        .contact-form {
-            margin-top: 30px;
         }
         .contact-form input, .contact-form textarea {
             width: 100%;
@@ -94,49 +79,74 @@
         .contact-form button:hover {
             background-color: #028b57;
         }
-        .map-container {
+        .faq-section, .map-container, .social-links {
+            width: 60%;
+            margin: 40px auto;
             text-align: center;
-            margin: 40px 0;
         }
-        footer {
-            text-align: center;
-            color: grey;
-            background-color: #36454F;
-            padding: 20px;
+        .faq-question {
+            background: #0070C0;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin: 5px 0;
+            border-radius: 5px;
         }
-        .footer-location {
-            text-align: right;
-            font-weight: bold;
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            background: white;
+            border: 1px solid #ddd;
+        }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .chat-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #04AA6D;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
         }
     </style>
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        }
+        function showConfirmation() {
+            alert('Thank you for contacting us! We will get back to you soon.');
+        }
+    </script>
 </head>
 <body>
-
 <header>
     <div class="logo">
         <img src="F_logo_dcs.cs.Model.1.jpg" alt="Company Logo">
     </div>
 </header>
-
 <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="About us.html">About us</a>
     <a href="Services.html">Services</a>
     <a href="Contact us.html">Contact us</a>
 </div>
-
 <h1 class="title">DESAI CiviSurv</h1>
 <h2 class="subtitle">Consulting Civil Engineers & Surveyors</h2>
-
 <div class="contact-box">
     <h3>Contact Details</h3>
     <p><strong>Phone:</strong> 8105082414, 9876543210</p>
     <p><strong>Email:</strong> desaicivisurv@gmail.com</p>
     <p><strong>Office Hours:</strong> Mon - Sat, 9:00 AM - 6:00 PM</p>
-
     <div class="contact-form">
         <h3>Send Us a Message</h3>
-        <form>
+        <form onsubmit="showConfirmation(); return false;">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
@@ -144,23 +154,23 @@
         </form>
     </div>
 </div>
-
+<div class="faq-section">
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq-question" onclick="toggleAnswer('faq1')">What services do you offer?</div>
+    <div class="faq-answer" id="faq1">We provide civil engineering and surveying services, including land surveying, structural design, and consulting.</div>
+    <div class="faq-question" onclick="toggleAnswer('faq2')">How can I request a quote?</div>
+    <div class="faq-answer" id="faq2">You can fill out our contact form or call us directly for a customized quote.</div>
+</div>
 <div class="map-container">
     <h3>Our Location</h3>
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.592397854335!2d77.38382231529272!3d15.268788213289532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d0f6c8f964d1%3A0xa44b99e62f3e4a11!2sHospet%20Karnataka!5e0!3m2!1sen!2sin!4v1631498893735!5m2!1sen!2sin" 
-        width="450" 
-        height="200" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy">
-    </iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.592397854335!2d77.38382231529272!3d15.268788213289532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d0f6c8f964d1%3A0xa44b99e62f3e4a11!2sHospet%20Karnataka!5e0!3m2!1sen!2sin!4v1631498893735!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </div>
-
+<div class="social-links">
+    <a href="#">Facebook</a> | <a href="#">LinkedIn</a> | <a href="#">Instagram</a>
+</div>
+<div class="chat-icon">💬</div>
 <footer>
     <p>&copy; 2023 DESAI CiviSurv</p>
-    <p class="footer-location">Opp. Yamaha showroom, Amaravathi, HOSPETE - 583201</p>
 </footer>
-
 </body>
 </html>
