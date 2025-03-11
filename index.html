@@ -57,6 +57,55 @@
             transform: scale(1.1);
             box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5);
         }
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+            padding: 10px;
+            background-color: #04AA6D;
+            border-radius: 5px;
+        }
+
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            background-color: #36454F;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            width: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .mobile-nav a {
+            padding: 12px;
+            text-align: center;
+            display: block;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid white;
+        }
+
+        .mobile-nav a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-nav a:hover {
+            background-color: #04AA6D;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -220,12 +269,31 @@
     <header>
         <img src="F_logo_dcs.cs.Model.1.jpg" alt="Logo">
         <nav>
+            <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="About us.html">About us</a>
             <a href="Services.html">Services</a>
             <a href="Contact us.html">Contact us</a>
+            </div>
+             <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <div class="mobile-nav" id="mobileNav">
+                <a href="index.html">Home</a>
+                <a href="About us.html">About us</a>
+                <a href="Services.html">Services</a>
+                <a href="Contact us.html">Contact us</a>
+            </div>
         </nav>
     </header>
+    <script>
+        function toggleMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileNav.style.display === 'flex') {
+                mobileNav.style.display = 'none';
+            } else {
+                mobileNav.style.display = 'flex';
+            }
+        }
+    </script>
 
     <!-- MAIN TITLE -->
     <div class="main-title">
