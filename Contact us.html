@@ -1,43 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="mystyle.css">
-<link rel="stylesheet" type="text/css" href="mobilescreen.css">
-<title>Contact us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" type="text/css" href="mobilescreen.css">
+    <title>Contact Us</title>
+    <style>
+        body {
+            background-color: LightGray;
+            font-family: 'Palatino Linotype', serif;
+        }
+        header {
+            background-color: #36454F;
+            padding: 20px;
+            text-align: left;
+        }
+        .logo img {
+            width: 15%;
+        }
+        .nav-links {
+            text-align: right;
+            margin-top: -30px;
+        }
+        .nav-links a {
+            font-size: 14px;
+            background-color: #04AA6D;
+            padding: 8px 15px;
+            color: white;
+            border-radius: 15px;
+            text-decoration: none;
+            margin: 0 5px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            background-color: #028b57;
+        }
+        .title {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 45px;
+            color: #0070C0;
+        }
+        .subtitle {
+            text-align: center;
+            background-color: #0070C0;
+            padding: 10px;
+            color: white;
+            font-size: 25px;
+            margin: 20px auto;
+            display: inline-block;
+        }
+        .contact-details {
+            text-align: center;
+            font-size: 14px;
+            margin: 40px 0;
+        }
+        .contact-box {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .contact-box h3 {
+            color: #0070C0;
+        }
+        .contact-box p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .contact-form {
+            margin-top: 30px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #028b57;
+        }
+        .map-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        footer {
+            text-align: center;
+            color: grey;
+            background-color: #36454F;
+            padding: 20px;
+        }
+        .footer-location {
+            text-align: right;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<body style="background-color:LightGray;">
+<body>
 
-<header style="background-color: #36454F; padding: 20px;"> 
-
-<div style="text-align:left; margin-below: 40px;"><img style="width: 15%;" src="F_logo_dcs.cs.Model.1.jpg"></div>    
-
+<header>
+    <div class="logo">
+        <img src="F_logo_dcs.cs.Model.1.jpg" alt="Company Logo">
+    </div>
 </header>
 
-<div style="text-align:right; margin-top: -30px;">
-<a style="font-size:12.5px; background-color: #04AA6D; padding: 05px 10px 05px 10px; color: black; padding-right: 10px; border-radius: 15px;" href="index.html">Home</a>
-<a style="font-size:12.5px; background-color: #04AA6D; padding: 05px 10px 05px 10px; color: black; padding-right: 10px; border-radius: 15px;" href="About us.html">About us</a>
-<a style="font-size:12.5px; background-color: #04AA6D; padding: 05px 10px 05px 10px; color: black; padding-right: 10px; border-radius: 15px;" href="Services.html">Services</a>
-<a style="font-size:12.5px; background-color: #04AA6D; padding: 05px 10px 05px 10px; color: black; padding-right: 10px; border-radius: 15px;" href="Contact us.html">Contact us</a>
+<div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="About us.html">About us</a>
+    <a href="Services.html">Services</a>
+    <a href="Contact us.html">Contact us</a>
 </div>
 
-<div style="text-align:center; margin-right: 300px; margin-left: 300px; margin-top: 50px;"><h1 style="font-size:45px; text-align:center; color:#0070C0; font-family: 'Palatino Linotype';">DESAI CiviSurv</h1></div>
+<h1 class="title">DESAI CiviSurv</h1>
+<h2 class="subtitle">Consulting Civil Engineers & Surveyors</h2>
 
-<div style="text-align:center; margin-right: 300px; margin-left: 300px; margin-below: -10px;"><h2 style="font-size:25px; text-align:center; background-color: #0070C0; padding: 10px 25px 10px 25px; color: white; padding-right: 20px; font-family: 'Palatino Linotype;'">Consulting Civil Engineer's & Surveyor's</h2></div>
+<div class="contact-box">
+    <h3>Contact Details</h3>
+    <p><strong>Phone:</strong> 8105082414, 9876543210</p>
+    <p><strong>Email:</strong> desaicivisurv@gmail.com</p>
+    <p><strong>Office Hours:</strong> Mon - Sat, 9:00 AM - 6:00 PM</p>
 
-<h2 style="font-size: 25px; text-align:center; line-height: 18px; margin-bottom: 50px; margin-top: 50px; font-family: 'Palatino Linotype'; ">Contact Details</h2>
-<p style="font-size: 12px; text-align:center; line-height: 18px; margin-bottom: 50px; margin-top: 50px; font-family: 'Palatino Linotype'; ">Contact no. 8105082414<br>Email. desaicivisurv@gmail.com</p>
+    <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
 
-<b><hr style="width: 60%; margin-bottom: 50px; color: blue;"></b>
+<div class="map-container">
+    <h3>Our Location</h3>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.592397854335!2d77.38382231529272!3d15.268788213289532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d0f6c8f964d1%3A0xa44b99e62f3e4a11!2sHospet%20Karnataka!5e0!3m2!1sen!2sin!4v1631498893735!5m2!1sen!2sin" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+</div>
 
-<footer style="text-align: center; color: grey; background-color: #36454F; padding: 20px;"> 
-
-    <p style="font-size: 12px";>Copyright &copy; 2023</p>
-    <b><p style="text-align:right;">Location - Opp. Yamaha showroom, <br>Amaravathi
-		  HOSPETE - 583201</p></b>
+<footer>
+    <p>&copy; 2023 DESAI CiviSurv</p>
+    <p class="footer-location">Opp. Yamaha showroom, Amaravathi, HOSPETE - 583201</p>
 </footer>
 
 </body>
 </html>
-
-
