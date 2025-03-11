@@ -140,16 +140,15 @@
 
         /* Survey Images Section */
         .image-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
             padding: 20px;
+            justify-content: center;
         }
 
         .image-gallery img {
             width: 100%;
-            max-width: 300px;
             height: auto;
             object-fit: cover;
             border-radius: 15px;
@@ -166,6 +165,29 @@
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
+        }
+
+        /* Classic Marquee Animation */
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            background-color: #04AA6D;
+            padding: 10px 0;
+        }
+
+        .marquee-text {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            animation: marquee-scroll 10s linear infinite;
+        }
+
+        @keyframes marquee-scroll {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
         }
 
         /* Footer */
