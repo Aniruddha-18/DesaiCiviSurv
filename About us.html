@@ -1,40 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="mystyle.css">
-<link rel="stylesheet" type="text/css" href="mobilescreen.css">
-<title>About us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" type="text/css" href="mobilescreen.css">
+    <title>About Us</title>
+    <style>
+        body {
+            background-color: LightGray;
+            font-family: 'Palatino Linotype', serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #36454F;
+            padding: 20px;
+            text-align: left;
+        }
+        header img {
+            max-width: 150px;
+            width: auto;
+        }
+        .navbar {
+            text-align: right;
+            margin-top: -30px;
+        }
+        .navbar a {
+            font-size: 12.5px;
+            background-color: #04AA6D;
+            padding: 5px 10px;
+            color: black;
+            border-radius: 15px;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+        .container {
+            max-width: 80%;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 45px;
+            color: #0070C0;
+        }
+        .subtitle {
+            font-size: 25px;
+            background-color: #0070C0;
+            color: white;
+            padding: 10px;
+            display: inline-block;
+        }
+        p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        hr {
+            width: 60%;
+            border: 1px solid blue;
+            margin: 50px auto;
+        }
+        footer {
+            background-color: #36454F;
+            color: grey;
+            padding: 20px;
+            font-size: 12px;
+        }
+    </style>
 </head>
-<body style="background-color:LightGray;">
-
-<header style="background-color: #36454F; padding: 20px;"> 
-
-<div style="text-align:left; margin-below: 40px;"><img style="width: 15%;" src="F_logo_dcs.cs.Model.1.jpg"></div>    
-
-</header>
-
-<div style="text-align:right; margin-top: -30px;">
-<a style="font-size:12.5px; background-color: #04AA6D; padding: 05px 10px 05px 10px; color: black; padding-right: 10px; border-radius: 15px;" href="index.html">Home</a>
-<a style="font-size:12.5px; background-color: #04AA6D; padding: 05px 10px 05px 10px; color: black; padding-right: 10px; border-radius: 15px;" href="About us.html">About us</a>
-<a style="font-size:12.5px; background-color: #04AA6D; padding: 05px 10px 05px 10px; color: black; padding-right: 10px; border-radius: 15px;" href="Services.html">Services</a>
-<a style="font-size:12.5px; background-color: #04AA6D; padding: 05px 10px 05px 10px; color: black; padding-right: 10px; border-radius: 15px;" href="Contact us.html">Contact us</a>
-</div>
-
-<div style="text-align:center; margin-right: 300px; margin-left: 300px; margin-top: 50px;"><h1 style="font-size:45px; text-align:center; color:#0070C0; font-family: 'Palatino Linotype';">DESAI CiviSurv</h1></div>
-
-<div style="text-align:center; margin-right: 300px; margin-left: 300px; margin-below: -10px;"><h2 style="font-size:25px; text-align:center; background-color: #0070C0; padding: 10px 25px 10px 25px; color: white; padding-right: 20px; font-family: 'Palatino Linotype';">Consulting Civil Engineer's & Surveyor's</h2></div>
-
-<h2 style="font-size: 25px; text-align:center; line-height: 18px; margin-bottom: 50px; margin-top: 50px; font-family: 'Palatino Linotype'; ">Our Vision</h2>
-<p style="font-size: 12px; text-align:center; line-height: 18px; margin-bottom: 50px; margin-top: 50px; font-family: 'Palatino Linotype'; ">The Vision of a Civil Engineer is Often Focused on Creating Sustainable, Safe, and Innovative Infrastructure <br>That Enhances the Quality of Life for People While Addressing the Challenges of the Present and Future</p>
-
-<b><hr style="width: 60%; margin-bottom: 50px; color: blue;"></b>
-
-<footer style="text-align: center; color: grey; background-color: #36454F; padding: 20px;"> 
-
-    <p style="font-size: 12px";>Copyright &copy; 2023</p> 
-
-</footer>
-
+<body>
+    <header>
+        <img src="F_logo_dcs.cs.Model.1.jpg" alt="Company Logo">
+    </header>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="About us.html">About us</a>
+        <a href="Services.html">Services</a>
+        <a href="Contact us.html">Contact us</a>
+    </div>
+    <div class="container">
+        <h1>DESAI CiviSurv</h1>
+        <h2 class="subtitle">Consulting Civil Engineer's & Surveyor's</h2>
+        <h2>Our Vision</h2>
+        <p>The vision of a Civil Engineer is often focused on creating sustainable, safe, and innovative infrastructure<br>
+            that enhances the quality of life for people while addressing the challenges of the present and future.</p>
+    </div>
+    <hr>
+    <footer>
+        <p>Copyright &copy; 2023</p>
+    </footer>
 </body>
 </html>
