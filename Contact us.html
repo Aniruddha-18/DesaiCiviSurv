@@ -41,7 +41,7 @@
         .nav-links a:hover {
             background-color: #028b57;
         }
-        .title {
+         .title {
             text-align: center;
             margin-top: 50px;
             font-size: 45px;
@@ -55,6 +55,17 @@
             font-size: 25px;
             margin: 20px auto;
             display: inline-block;
+        }
+        .marquee-container {
+            margin: 20px 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-container marquee {
+            font-size: 18px;
+            color: #36454F;
+            font-weight: bold;
+            padding: 0;
         }
         .contact-box {
             width: 60%;
@@ -181,7 +192,11 @@
 
 <h1 class="title">DESAI CiviSurv</h1>
 <h2 class="subtitle">Consulting Civil Engineers & Surveyors</h2>
-
+    
+ <div class="marquee-container">
+    <marquee behavior="scroll" direction="left">"Quality is never an accident; it is always the result of intelligent effort." - John Ruskin</marquee>
+</div>
+    
 <div class="contact-box">
     <h3>Contact Details</h3>
     <p><strong>Phone:</strong> 8105082414, 9876543210</p>
