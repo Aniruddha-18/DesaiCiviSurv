@@ -22,44 +22,37 @@
     .logo-container img {
         width: 15%;
     }
-    .navbar {
+   .navbar {
     display: flex;
     justify-content: flex-end; /* Ensures navbar stays on the right */
     align-items: center;
     padding: 10px;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
     gap: 12px; /* Added spacing between links */
 }
 
 .navbar a {
-    font-size: 16px; /* Increased font size for better readability */
+    font-size: 16px;
     background-color: #04AA6D;
-    padding: 12px 25px; /* Increased padding for a larger and more clickable appearance */
+    padding: 12px 25px;
     color: white;
-    border-radius: 30px; /* More rounded corners */
+    border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    transition: all 0.3s ease-in-out; /* Smooth transition effect */
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Added shadow for better depth */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Hover Effect */
 .navbar a:hover {
-    background-color: #028A5E; /* Darker green for a subtle hover effect */
-    transform: scale(1.1); /* Slight zoom effect */
-    color: #fff;
+    background-color: #028A5E;
+    transform: scale(1.1);
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: row;
-        justify-content: flex-end; /* Keeps links aligned to the right */
-        position: static;
-        transform: none;
+        justify-content: flex-end;
         padding-right: 15px;
         gap: 10px;
     }
@@ -68,9 +61,7 @@
         font-size: 14px;
         padding: 10px 20px;
     }
-}
-
-    
+}  
     .hero {
         margin: 50px auto;
     }
@@ -134,18 +125,16 @@
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img style="width: 150px;" src="F_logo_dcs.cs.Model.1.jpg">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="About us.html">About us</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="Contact us.html">Contact us</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="logo-container">
+        <img style="width: 150px;" src="F_logo_dcs.cs.Model.1.jpg">
+    </div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="About us.html">About us</a>
+        <a href="Services.html">Services</a>
+        <a href="Contact us.html">Contact us</a>
+    </div>
+</header>
     
     <section class="hero">
         <h1>DESAI CiviSurv</h1>
