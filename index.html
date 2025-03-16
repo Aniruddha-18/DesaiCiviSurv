@@ -377,7 +377,26 @@
     <div class="main-title">
         <h1>DESAI CiviSurv</h1>
         <h2>Consulting Civil Engineer's & Surveyor's</h2>
-    </div>
+        <!-- MAPS OF SURVEY BUTTON -->
+    <button onclick="navigateToMaps()" style="
+        background-color: #00008B; /* Dark Blue */
+        color: white;
+        padding: 12px 20px;
+        font-size: 14px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+        font-weight: bold;
+        margin-top: 15px;
+    " 
+    onmouseover="this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.5)';" 
+    onmouseout="this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.3)';">
+        MAPS OF SURVEY
+    </button>
+</div>
+    
 
     <!-- DESCRIPTION SECTION -->
     <div class="description">
@@ -439,6 +458,12 @@
             }
         }
     </script>
+    <!-- maps of survey -->
+    <script>
+    function navigateToMaps() {
+        window.location.href = "maps.html"; // Change to the actual link
+    }
+</script>
     
 <!-- JavaScript for Lightbox -->
     <script>
