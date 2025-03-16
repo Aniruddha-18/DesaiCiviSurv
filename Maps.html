@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Button</title>
+</head>
+<body>
+
+    <button onclick="navigate()" style="
+        background-color: #00008B; /* Dark Blue */
+        color: white;
+        padding: 8px 16px; /* Normal padding */
+        font-size: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+    " 
+    onmouseover="this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.3)';" 
+    onmouseout="this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.2)';">
+        MAPS OF SURVEY
+    </button>
+
+    <script>
+        function navigate() {
+            window.location.href = "https://your-destination-url.com"; // Change to your actual link
+        }
+    </script>
+
+</body>
+</html>
