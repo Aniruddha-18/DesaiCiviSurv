@@ -377,26 +377,24 @@
     <div class="main-title">
         <h1>DESAI CiviSurv</h1>
         <h2>Consulting Civil Engineer's & Surveyor's</h2>
-        <!-- MAPS OF SURVEY BUTTON -->
-    <button onclick="navigateToMaps()" style="
-        background-color: #00008B; /* Dark Blue */
+        
+       <button onclick="openMaps()" style="
+        background-color: darkblue;
         color: white;
-        padding: 12px 20px;
-        font-size: 14px;
+        font-size: 10px;
+        padding: 10px 20px;
         border: none;
-        border-radius: 8px;
+        border-radius: 5px;
         cursor: pointer;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        position: relative;
         transition: all 0.3s ease-in-out;
-        font-weight: bold;
-        margin-top: 15px;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
     " 
-    onmouseover="this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.5)';" 
-    onmouseout="this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.3)';">
+    onmouseover="this.style.boxShadow='0px 0px 20px rgba(255, 255, 255, 0.8)'"
+    onmouseout="this.style.boxShadow='0px 0px 10px rgba(255, 255, 255, 0.5)'">
         MAPS OF SURVEY
     </button>
 </div>
-    
 
     <!-- DESCRIPTION SECTION -->
     <div class="description">
@@ -458,10 +456,13 @@
             }
         }
     </script>
+    
     <!-- maps of survey -->
     <script>
-    function navigateToMaps() {
-        window.location.href = "maps.html"; // Change to the actual link
+    function openMaps() {
+        alert("Redirecting to Maps of Survey...");
+        // You can replace the alert with a redirect:
+        // window.location.href = "maps_of_survey.html";
     }
 </script>
     
