@@ -23,25 +23,26 @@
             width: 150px;
             height: 59.69px;
         }
-        .nav-links {
-            text-align: right;
-            margin-top: -30px;
+       .navbar {
+            display: flex;
+            justify-content: flex-end; /* Ensures navbar stays on the right */
+            padding: 10px;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
         }
-        .nav-links a {
-            font-size: 14px;
-            background-color: #04AA6D;
-            padding: 10px 20px;
-            color: black;
-            text-decoration: none;
-            border-radius: 25px;
-            margin-left: 8px;
-            display: inline-block;
-            transition: 0.3s;
-            font-weight: bold;
+        .navbar a {
+        font-size: 14px; /* Increased font size */
+        background-color: #04AA6D;
+        padding: 10px 20px; /* Increased padding for a larger appearance */
+        color: black;
+        border-radius: 25px;
+        text-decoration: none;
+        margin-left: 8px;
+        font-weight: bold; /* Makes the text stand out more */
         }
-        .nav-links a:hover {
-            background-color: #028b57;
-        }
+        
          .title {
             text-align: center;
             margin-top: 50px;
