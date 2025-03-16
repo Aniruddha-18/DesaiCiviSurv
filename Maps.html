@@ -3,44 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maps Gallery</title>
+    <title>Maps of Survey</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
             padding: 20px;
         }
-
-        /* Image Gallery Grid */
-        .map-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
-            max-width: 800px;
-            margin: auto;
-            padding-top: 20px;
-        }
-        .map-gallery img {
+        .gallery img {
             width: 100%;
+            height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
         }
-        .map-gallery img:hover {
+        .gallery img:hover {
             transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-
     <h2>Maps of Survey</h2>
-
-    <!-- Image Gallery -->
-    <div class="map-gallery">
-        <img src="map1.jpg" alt="Map 1">
-        <img src="map2.jpg" alt="Map 2">
-        <img src="map3.jpg" alt="Map 3">
+    <div class="gallery">
+        <img src="map 1.jpg" alt="Map 1">
+        <img src="map 2.jpg" alt="Map 2">
+        <img src="map 3.jpg" alt="Map 3">
+        <img src="map 4.jpg" alt="Map 4">
     </div>
-
 </body>
 </html>
