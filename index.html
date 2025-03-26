@@ -244,7 +244,7 @@
         }
 
       /* maps of survey */
-       .nav-button {
+   .nav-button {
     text-align: center;
     background-color: white;
     color: #0070C0;
@@ -254,8 +254,8 @@
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
-    display: block;
-    margin: 20px auto;
+    display: block;  /* Ensures it takes full width */
+    margin: 20px auto; /* Centers it horizontally */
     transition: all 0.3s ease-in-out;
 }
 
@@ -263,6 +263,11 @@
     background-color: #0070C0;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.live-picture {
+    text-align: center; /* Centers the image */
+    margin-top: 20px; /* Adds space after the button */
 }
 
        .description {
@@ -422,12 +427,11 @@
         <p class="marquee-text">"Success is not the key to happiness. Happiness is the key to success."</p>
     </div>
 
-    <!-- Survey Images Section -->
-    <h2 style="text-align:center; background-color: white; color: #0070C0; padding: 10px;">Live Pictures of Survey</h2>
-        
-        <!-- Navigation Button -->
+            <!-- Navigation Button -->
     <button class="nav-button" onclick="openMapsPage()">MAPS OF SURVEY</button>
-        
+
+    <!-- Survey Images Section -->
+    <h2 style="text-align:center; background-color: white; color: #0070C0; padding: 10px;">Live Pictures of Survey</h2>   
     <div class="image-gallery">
         <img src="abhi1.jpeg" onclick="openModal(0)">
         <img src="abhi3.jpeg" onclick="openModal(1)">
