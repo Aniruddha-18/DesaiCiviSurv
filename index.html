@@ -13,30 +13,56 @@
             padding: 0;
             color: white;
         }
-        /* Survey Images Section */
-        .image-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            padding: 20px;
-        }
-
-        .image-gallery img {
+       /* Style for the live picture */
+        .live-picture img {
             width: 100%;
-            max-width: 300px;
-            height: auto;
-            object-fit: cover;
-            border-radius: 15px;
-            transition: transform 0.4s ease, opacity 1s ease-in-out;
+            max-width: 500px;
+            display: block;
+            margin: auto;
+            border: 3px solid #0070C0;
+            border-radius: 10px;
+        }
+
+        /* Section for survey images */
+        .survey-images {
+            border: 5px solid;
+            border-image: linear-gradient(45deg, red, blue, green, orange) 1;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        /* Style for the images inside the section */
+        .survey-images img {
+            width: 100%;
+            max-width: 150px;
+            margin: 10px;
+            border: 3px solid black;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        /* Hide extra images initially */
+        .hidden {
+            display: none;
+        }
+
+        /* Style for "View More" button */
+        .view-more-btn {
+            background-color: #0070C0;
+            color: white;
+            padding: 10px 20px;
+            border: none;
             cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
         }
 
-        .image-gallery img:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+        .view-more-btn:hover {
+            background-color: #00508A;
         }
-
+ 
         /* Lightbox (Modal) */
         .modal {
             display: none;
@@ -427,29 +453,37 @@
         <p class="marquee-text">"Success is not the key to happiness. Happiness is the key to success."</p>
     </div>
 
-            <!-- Navigation Button -->
+         <!-- Navigation Button -->
     <button class="nav-button" onclick="openMapsPage()">MAPS OF SURVEY</button>
 
-    <!-- Survey Images Section -->
-    <h2 style="text-align:center; background-color: white; color: #0070C0; padding: 10px;">Live Pictures of Survey</h2>   
-    <div class="image-gallery">
-        <img src="abhi1.jpeg" onclick="openModal(0)">
-        <img src="abhi3.jpeg" onclick="openModal(1)">
-        <img src="abhi4.jpeg" onclick="openModal(2)">
-        <img src="abhi6.jpeg" onclick="openModal(3)">
-        <img src="abhi7.jpeg" onclick="openModal(4)">
-        <img src="abhi8.jpeg" onclick="openModal(5)">
-        <img src="abhi9.jpeg" onclick="openModal(6)">
-        <img src="abhi10.jpeg" onclick="openModal(7)">
-        <img src="abhi11.jpeg" onclick="openModal(8)">
-        <img src="abhi2.jpeg" onclick="openModal(9)">
-        <img src="abhi12.jpeg" onclick="openModal(10)">
-        <img src="abhi13.jpeg" onclick="openModal(11)">
-        <img src="abhi15.jpeg" onclick="openModal(12)">
-        <img src="abhi16.jpeg" onclick="openModal(13)">
-        <img src="abhi14.jpeg" onclick="openModal(14)">
-        <img src="abhi5.jpeg" onclick="openModal(15)">
+   <!-- Live Picture Section -->
+    <div class="live-picture">
+        <img src="images.jpg" alt="Live Picture of Survey">
     </div>
+
+    <!-- Survey Images Section -->
+    <div class="survey-images">
+        <h2>Survey Images</h2>
+        <img src="abhi1.jpg" alt="Survey Image 1">
+        <img src="abhi2.jpg" alt="Survey Image 2">
+        <img src="abhi3.jpg" alt="Survey Image 3">
+        <img src="abhi4.jpg" alt="Survey Image 4">
+        
+        <!-- Hidden images (they will show after clicking "View More") -->
+        <div id="more-images" class="hidden">
+            <img src="abhi5.jpg" alt="Survey Image 5">
+            <img src="abhi6.jpg" alt="Survey Image 6">
+            <img src="abhi7.jpg" alt="Survey Image 7">
+            <img src="abhi8.jpg" alt="Survey Image 8">
+            <img src="abhi9.jpg" alt="Survey Image 9">
+            <img src="abhi10.jpg" alt="Survey Image 10">
+            <img src="abhi11.jpg" alt="Survey Image 11">
+            <img src="abhi12.jpg" alt="Survey Image 12">
+            <img src="abhi13.jpg" alt="Survey Image 13">
+            <img src="abhi14.jpg" alt="Survey Image 14">
+            <img src="abhi15.jpg" alt="Survey Image 15">
+            <img src="abhi16.jpg" alt="Survey Image 16">
+        </div>
     
 <!-- Lightbox Modal -->
     <div id="lightboxModal" class="modal">
@@ -463,7 +497,25 @@
     <footer>
         <p>&copy; 2023 DESAI CiviSurv. All Rights Reserved.</p>
     </footer>
-    
+
+        <!-- View More Button -->
+        <button class="view-more-btn" id="viewMoreBtn">View More</button>
+    </div>
+
+    <script>
+        document.getElementById("viewMoreBtn").addEventListener("click", function() {
+            var moreImages = document.getElementById("more-images");
+            if (moreImages.classList.contains("hidden")) {
+                moreImages.classList.remove("hidden");
+                this.textContent = "View Less";
+            } else {
+                moreImages.classList.add("hidden");
+                this.textContent = "View More";
+            }
+        });
+    </script>
+        
+    <!-- toggle menu -->
     <script>
         function toggleMenu() {
             const mobileNav = document.getElementById('mobileNav');
