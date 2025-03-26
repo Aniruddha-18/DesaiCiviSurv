@@ -44,8 +44,9 @@
         }
         /* Hide extra images initially */
         .hidden {
-            display: none;
-        }
+        display: none !important;
+               }
+
 
         /* Style for "View More" button */
         .view-more-btn {
@@ -496,17 +497,18 @@
     </div>
 
     <script>
-        document.getElementById("viewMoreBtn").addEventListener("click", function() {
-            var moreImages = document.getElementById("more-images");
-            if (moreImages.classList.contains("hidden")) {
-                moreImages.classList.remove("hidden");
-                this.textContent = "View Less";
-            } else {
-                moreImages.classList.add("hidden");
-                this.textContent = "View More";
-            }
-        });
-    </script>
+      document.getElementById("viewMoreBtn").addEventListener("click", function() {
+        console.log("Button clicked!"); // Debugging
+        var moreImages = document.getElementById("more-images");
+        if (moreImages.classList.contains("hidden")) {
+        moreImages.classList.remove("hidden");
+        this.textContent = "View Less";
+    } else {
+        moreImages.classList.add("hidden");
+        this.textContent = "View More";
+    }
+    });
+     </script>
 
     <!-- Footer Section -->
     <footer>
