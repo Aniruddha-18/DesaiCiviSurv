@@ -65,7 +65,7 @@
         }
  
         /* Lightbox (Modal) */
-        .modal {
+         .modal {
             display: none;
             position: fixed;
             z-index: 1000;
@@ -75,12 +75,13 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.9);
             text-align: center;
+            justify-content: center;
+            align-items: center;
         }
 
         .modal img {
             max-width: 90%;
             max-height: 80vh;
-            margin-top: 50px;
             border-radius: 10px;
             animation: fadeIn 0.5s ease-in-out;
         }
@@ -111,13 +112,8 @@
             cursor: pointer;
         }
 
-        .prev {
-            left: 10px;
-        }
-
-        .next {
-            right: 10px;
-        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
 
         .prev:hover, .next:hover {
             background: rgba(255, 255, 255, 0.5);
@@ -127,6 +123,28 @@
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
+        }
+
+        /* Gallery Images */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 150px;
+            height: 100px;
+            border: 3px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
         }
 
         /* Header Section */
@@ -531,15 +549,15 @@
     <script>
         let currentIndex = 0;
         const images = [
-            "abhi1.jpeg", "abhi3.jpeg", "abhi4.jpeg", "abhi6.jpeg", "abhi7.jpeg", 
-            "abhi8.jpeg", "abhi9.jpeg", "abhi10.jpeg", "abhi11.jpeg", "abhi2.jpeg", 
-            "abhi12.jpeg", "abhi13.jpeg", "abhi15.jpeg", "abhi16.jpeg", "abhi14.jpeg", "abhi5.jpeg"
+            "images/abhi1.jpeg", "images/abhi3.jpeg", "images/abhi4.jpeg", "images/abhi6.jpeg", "images/abhi7.jpeg", 
+            "images/abhi8.jpeg", "images/abhi9.jpeg", "images/abhi10.jpeg", "images/abhi11.jpeg", "images/abhi2.jpeg", 
+            "images/abhi12.jpeg", "images/abhi13.jpeg", "images/abhi15.jpeg", "images/abhi16.jpeg", "images/abhi14.jpeg", "abhi5.jpeg"
         ];
 
-        function openModal(index) {
+       function openModal(index) {
             currentIndex = index;
             document.getElementById("modalImage").src = images[currentIndex];
-            document.getElementById("lightboxModal").style.display = "block";
+            document.getElementById("lightboxModal").style.display = "flex";
         }
 
         function closeModal() {
@@ -555,6 +573,13 @@
             }
             document.getElementById("modalImage").src = images[currentIndex];
         }
+
+        function clickOutside(event) {
+            if (event.target.classList.contains("modal")) {
+                closeModal();
+            }
+        }
     </script>
+
 </body>
 </html>
