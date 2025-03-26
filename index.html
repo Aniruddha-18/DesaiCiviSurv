@@ -64,7 +64,7 @@
         }
  
         /* Lightbox (Modal) */
-        .lightbox {
+       .lightbox {
     display: none;
     position: fixed;
     top: 0;
@@ -79,15 +79,19 @@
 }
 
 .lightbox img {
-    max-width: 90%;
-    max-height: 80vh;
-    object-fit: contain;  /* Ensures images keep their aspect ratio */
+    max-width: 90vw;  /* Ensures the image does not exceed 90% of the viewport width */
+    max-height: 90vh; /* Ensures the image does not exceed 90% of the viewport height */
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Maintains aspect ratio without stretching */
+    display: block;
+    margin: auto;
 }
 
 .close {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 20px;
+    right: 30px;
     color: white;
     font-size: 30px;
     cursor: pointer;
@@ -113,12 +117,7 @@
 }
 
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Gallery Images */
+      /* Gallery Images */
         .gallery {
             display: flex;
             flex-wrap: wrap;
