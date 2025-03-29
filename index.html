@@ -73,7 +73,7 @@
             cursor: pointer;
         }
 
-       /* Ensure modal is centered */
+    /* Lightbox Modal */
 #lightbox-modal {
     display: none;
     position: fixed;
@@ -86,15 +86,26 @@
     text-align: center;
 }
 
-/* Center image inside modal */
-#lightbox-image {
+/* Container for Image */
+#lightbox-container {
+    position: relative; /* Keeps navigation inside */
     max-width: 80%;
     max-height: 80vh;
     margin: auto;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Navigation buttons */
+/* Image inside the modal */
+#lightbox-image {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+    margin: auto;
+}
+
+/* Navigation buttons (inside container) */
 .next, .prev {
     position: absolute;
     top: 50%;
@@ -108,14 +119,14 @@
     z-index: 1001;
 }
 
-/* Position next button */
+/* Position next button inside the container */
 .next {
-    right: 5%;
+    right: 10px; /* Adjusted to be within container */
 }
 
-/* Position previous button */
+/* Position previous button inside the container */
 .prev {
-    left: 5%;
+    left: 10px; /* Adjusted to be within container */
 }
 
 /* Hide buttons when not in modal */
@@ -502,12 +513,13 @@
         </div>
     
 <!-- Lightbox Modal -->
-    <div id="lightboxModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <span class="prev" onclick="changeImage(-1)">&#10094;</span>
-        <img id="modalImage" src="">
-        <span class="next" onclick="changeImage(1)">&#10095;</span>
+   <div id="lightbox-modal">
+    <div id="lightbox-container">
+        <span class="prev" onclick="changeImage(-1)">❮</span>
+        <img id="lightbox-image" src="">
+        <span class="next" onclick="changeImage(1)">❯</span>
     </div>
+</div>
 
            <!-- View More Button -->
         <button class="view-more-btn" id="viewMoreBtn">View More</button>
