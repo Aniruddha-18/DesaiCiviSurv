@@ -73,7 +73,7 @@
             cursor: pointer;
         }
 
-    /* Lightbox Modal */
+ /* Lightbox Modal */
 #lightbox-modal {
     display: none;
     position: fixed;
@@ -86,9 +86,9 @@
     text-align: center;
 }
 
-/* Container for Image */
+/* Image container inside modal */
 #lightbox-container {
-    position: relative; /* Keeps navigation inside */
+    position: relative;
     max-width: 80%;
     max-height: 80vh;
     margin: auto;
@@ -97,7 +97,7 @@
     justify-content: center;
 }
 
-/* Image inside the modal */
+/* Image inside modal */
 #lightbox-image {
     max-width: 100%;
     max-height: 80vh;
@@ -105,7 +105,7 @@
     margin: auto;
 }
 
-/* Navigation buttons (inside container) */
+/* Navigation buttons */
 .next, .prev {
     position: absolute;
     top: 50%;
@@ -119,15 +119,24 @@
     z-index: 1001;
 }
 
-/* Position next button inside the container */
 .next {
-    right: 10px; /* Adjusted to be within container */
+    right: 10px;
 }
 
-/* Position previous button inside the container */
 .prev {
-    left: 10px; /* Adjusted to be within container */
+    left: 10px;
 }
+
+/* Ensure survey images have a cursor pointer */
+.survey-image {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.survey-image:hover {
+    opacity: 0.8;
+}
+
 
 /* Hide buttons when not in modal */
 #lightbox-modal .next, 
