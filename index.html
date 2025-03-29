@@ -62,59 +62,69 @@
         .view-more-btn:hover {
             background-color: #00508A;
         }
- 
+   /* Style for the live pictures */
+        .live-picture img {
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            margin: auto;
+            border: 3px solid #0070C0;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
         /* Lightbox (Modal) */
-       .lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
 
-.lightbox img {
-    max-width: 90vw;  /* Ensures the image does not exceed 90% of the viewport width */
-    max-height: 90vh; /* Ensures the image does not exceed 90% of the viewport height */
-    width: auto;
-    height: auto;
-    object-fit: contain; /* Maintains aspect ratio without stretching */
-    display: block;
-    margin: auto;
-}
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            margin: auto;
+        }
 
-.close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-}
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
 
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 24px;
-}
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 24px;
+        }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+        .prev { left: 10px; }
+        .next { right: 10px; }
 
-.prev:hover, .next:hover {
-    background: black;
-}
+        .prev:hover, .next:hover {
+            background: black;
+        }
 
 
       /* Gallery Images */
