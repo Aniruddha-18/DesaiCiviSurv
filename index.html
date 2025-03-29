@@ -522,13 +522,15 @@
         </div>
     
 <!-- Lightbox Modal -->
-  <div id="lightbox-modal" onclick="closeModal(event)">
+<div id="lightbox-modal" onclick="closeModal(event)">
     <div id="lightbox-container">
         <span class="prev" onclick="changeImage(-1)">❮</span>
         <img id="lightbox-image" src="">
         <span class="next" onclick="changeImage(1)">❯</span>
     </div>
 </div>
+
+
 
            <!-- View More Button -->
         <button class="view-more-btn" id="viewMoreBtn">View More</button>
@@ -566,40 +568,36 @@
     </script>
     
 <!-- JavaScript for Lightbox -->
-    <script>
-        let currentIndex = 0;
-        const images = [
-            "images/abhi1.jpeg", "images/abhi3.jpeg", "images/abhi4.jpeg", "images/abhi6.jpeg", "images/abhi7.jpeg", 
-            "images/abhi8.jpeg", "images/abhi9.jpeg", "images/abhi10.jpeg", "images/abhi11.jpeg", "images/abhi2.jpeg", 
-            "images/abhi12.jpeg", "images/abhi13.jpeg", "images/abhi15.jpeg", "images/abhi16.jpeg", "images/abhi14.jpeg", "abhi5.jpeg"
-        ];
+<script>
+   let currentIndex = 0;
+const images = [
+    "images/abhi1.jpeg", "images/abhi3.jpeg", "images/abhi4.jpeg", "images/abhi6.jpeg", "images/abhi7.jpeg", 
+    "images/abhi8.jpeg", "images/abhi9.jpeg", "images/abhi10.jpeg", "images/abhi11.jpeg", "images/abhi2.jpeg", 
+    "images/abhi12.jpeg", "images/abhi13.jpeg", "images/abhi15.jpeg", "images/abhi16.jpeg", "images/abhi14.jpeg", "images/abhi5.jpeg"
+];
 
-       function openModal(index) {
-            currentIndex = index;
-            document.getElementById("modalImage").src = images[currentIndex];
-            document.getElementById("lightboxModal").style.display = "flex";
-        }
+function openModal(index) {
+    currentIndex = index;
+    document.getElementById("lightbox-image").src = images[currentIndex];
+    document.getElementById("lightbox-modal").style.display = "flex";
+}
 
-        function closeModal() {
-            document.getElementById("lightboxModal").style.display = "none";
-        }
+function closeModal(event) {
+    if (event.target.id === "lightbox-modal") {
+        document.getElementById("lightbox-modal").style.display = "none";
+    }
+}
 
-        function changeImage(direction) {
-            currentIndex += direction;
-            if (currentIndex < 0) {
-                currentIndex = images.length - 1;
-            } else if (currentIndex >= images.length) {
-                currentIndex = 0;
-            }
-            document.getElementById("modalImage").src = images[currentIndex];
-        }
-
-        function clickOutside(event) {
-            if (event.target.classList.contains("modal")) {
-                closeModal();
-            }
-        }
-    </script>
+function changeImage(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+    } else if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+    document.getElementById("lightbox-image").src = images[currentIndex];
+}
+ </script>
 
 </body>
 </html>
