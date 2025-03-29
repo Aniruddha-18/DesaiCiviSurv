@@ -22,6 +22,44 @@
             border: 3px solid #0070C0;
             border-radius: 10px;
         }
+        
+ /* Suvrvey text */
+   .survey-text {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+ .parent-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust based on your layout */
+    margin: auto;
+    padding: 20px;
+    background-color: #2c3e50; /* Optional */
+    border-radius: 10px;
+}
+
+  .image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
         /* Section for survey images */
         .survey-images {
@@ -48,20 +86,36 @@
                }
 
         /* Style for "View More" button */
-        .view-more-btn {
-            background-color: #0070C0;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 10px;
-            border-radius: 5px;
+.view-more-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+    .view-more-btn:hover {
+            background-color: #0056b3;
         }
 
-        .view-more-btn:hover {
-            background-color: #00508A;
-        }
+     #more-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+}
+#more-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
    /* Style for the live pictures */
         .live-picture img {
             width: 100%;
@@ -498,28 +552,35 @@
     <h2 style="text-align:center; background-color: white; color: #0070C0; padding: 10px;">Live Pictures of Survey</h2>
 
     <!-- Survey Images Section -->
-    <div class="survey-images">
-        <h2>Survey Images</h2>
-        <img src="images\abhi7.jpeg" alt="Survey Image 1" onclick="openModal(0)">
-        <img src="images\abhi2.jpeg" alt="Survey Image 2" onclick="openModal(1)">
-        <img src="images\abhi6.jpeg" alt="Survey Image 3" onclick="openModal(2)">
-        <img src="images\abhi4.jpeg" alt="Survey Image 4" onclick="openModal(3)">
-        
-        <!-- Hidden images (they will show after clicking "View More") -->
-        <div id="more-images" class="hidden">
-            <img src="images\abhi5.jpeg" alt="Survey Image 5" onclick="openModal(4)">
-            <img src="images\abhi3.jpeg" alt="Survey Image 6" onclick="openModal(5)">
-            <img src="images\abhi1.jpeg" alt="Survey Image 7" onclick="openModal(6)">
-            <img src="images\abhi8.jpeg" alt="Survey Image 8" onclick="openModal(7)">
-            <img src="images\abhi9.jpeg" alt="Survey Image 9" onclick="openModal(8)">
-            <img src="images\abhi10.jpeg" alt="Survey Image 10" onclick="openModal(9)">
-            <img src="images\abhi11.jpeg" alt="Survey Image 11" onclick="openModal(10)">
-            <img src="images\abhi12.jpeg" alt="Survey Image 12" onclick="openModal(11)">
-            <img src="images\abhi13.jpeg" alt="Survey Image 13" onclick="openModal(12)">
-            <img src="images\abhi14.jpeg" alt="Survey Image 14" onclick="openModal(13)">
-            <img src="images\abhi15.jpeg" alt="Survey Image 15" onclick="openModal(14)">
-            <img src="images\abhi16.jpeg" alt="Survey Image 16" onclick="openModal(15)">
-        </div>
+    <div class="parent-container">
+    
+    <div class="image-container">
+        <img src="images/abhi7.jpeg" alt="Survey Image 1" onclick="openModal(0)">
+        <img src="images/abhi2.jpeg" alt="Survey Image 2" onclick="openModal(1)">
+        <img src="images/abhi6.jpeg" alt="Survey Image 3" onclick="openModal(2)">
+        <img src="images/abhi4.jpeg" alt="Survey Image 4" onclick="openModal(3)">
+    </div>
+
+    <!-- Hidden images will be shown after clicking View More -->
+    <div id="more-images" class="image-container hidden">
+        <img src="images/abhi5.jpeg" alt="Survey Image 5" onclick="openModal(4)">
+        <img src="images/abhi3.jpeg" alt="Survey Image 6" onclick="openModal(5)">
+        <img src="images/abhi1.jpeg" alt="Survey Image 7" onclick="openModal(6)">
+        <img src="images/abhi8.jpeg" alt="Survey Image 8" onclick="openModal(7)">
+        <img src="images/abhi9.jpeg" alt="Survey Image 9" onclick="openModal(8)">
+        <img src="images/abhi10.jpeg" alt="Survey Image 10" onclick="openModal(9)">
+        <img src="images/abhi11.jpeg" alt="Survey Image 11" onclick="openModal(10)">
+        <img src="images/abhi12.jpeg" alt="Survey Image 12" onclick="openModal(11)">
+        <img src="images/abhi13.jpeg" alt="Survey Image 13" onclick="openModal(12)">
+        <img src="images/abhi14.jpeg" alt="Survey Image 14" onclick="openModal(13)">
+        <img src="images/abhi15.jpeg" alt="Survey Image 15" onclick="openModal(14)">
+        <img src="images/abhi16.jpeg" alt="Survey Image 16" onclick="openModal(15)">
+    </div>
+
+    <!-- View More Button -->
+    <button class="view-more" onclick="toggleImages()">View More</button>
+</div>
+
     
 <!-- Lightbox Modal -->
 <div id="lightbox-modal" onclick="closeModal(event)">
@@ -529,23 +590,22 @@
         <span class="next" onclick="changeImage(1)">❯</span>
     </div>
 </div>
-           <!-- View More Button -->
-        <button class="view-more-btn" id="viewMoreBtn">View More</button>
-    </div>
+        <script>
+    function toggleImages() {
+    var moreImages = document.getElementById("more-images");
+    var button = document.querySelector(".view-more");
 
-    <script>
-      document.getElementById("viewMoreBtn").addEventListener("click", function() {
-        console.log("Button clicked!"); // Debugging
-        var moreImages = document.getElementById("more-images");
-        if (moreImages.classList.contains("hidden")) {
+    if (moreImages.style.display === "none" || moreImages.classList.contains("hidden")) {
+        moreImages.style.display = "flex";
         moreImages.classList.remove("hidden");
-        this.textContent = "View Less";
+        button.textContent = "View Less";
     } else {
+        moreImages.style.display = "none";
         moreImages.classList.add("hidden");
-        this.textContent = "View More";
+        button.textContent = "View More";
     }
-    });
-     </script>
+}
+            </script>
 
     <!-- Footer Section -->
     <footer>
