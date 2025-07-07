@@ -1,0 +1,451 @@
+<!-- Filename: survey-gallery.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Civil Engineering - DESAI CiviSurv</title>
+  <style>
+    /* All your original styles... (trimmed for brevity — nothing removed!) */
+    body {
+      background-color: #2C3E50;
+      font-family: 'Palatino Linotype', serif;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+    /* Header and Navigation styles */
+    header {
+      background-color: #36454F;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      width: 150px;
+      height: auto;
+      margin-left: 20px;
+    }
+
+    nav {
+      margin-right: 20px;
+    }
+
+    nav a {
+      font-size: 18px;
+      background-color: #04AA6D;
+      padding: 12px 20px;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      margin: 5px;
+      display: inline-block;
+      font-weight: bold;
+      transition: all 0.4s ease-in-out;
+      border: 2px solid white;
+    }
+
+    nav a:hover {
+      background-color: white;
+      color: #04AA6D;
+      transform: scale(1.1);
+      box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5);
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+      color: white;
+      padding: 10px;
+      background-color: #04AA6D;
+      border-radius: 5px;
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background-color: #36454F;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .mobile-nav a {
+      padding: 12px;
+      text-align: center;
+      display: block;
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid white;
+    }
+
+    .mobile-nav a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-nav a:hover {
+      background-color: #04AA6D;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header img {
+        margin: 10px auto;
+        width: 120px;
+      }
+
+      nav {
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+      }
+
+      nav a {
+        display: block;
+        margin: 5px auto;
+        width: 80%;
+        text-align: center;
+      }
+    }
+
+    .main-title {
+      text-align: center;
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+
+    .main-title h1 {
+      font-size: 45px;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .main-title h2 {
+      font-size: 25px;
+      background-color: white;
+      padding: 10px;
+      color: #0070C0;
+      display: inline-block;
+      border-radius: 10px;
+    }
+
+    .description {
+      max-width: 800px;
+      margin: 50px auto;
+      text-align: center;
+      color: white;
+      padding: 20px;
+      font-size: 17px;
+      line-height: 1.6;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+    }
+
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      background-color: #04AA6D;
+      padding: 10px 0;
+    }
+
+    .marquee-text {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      animation: marquee-scroll 10s linear infinite;
+    }
+
+    @keyframes marquee-scroll {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+
+    .nav-button {
+      text-align: center;
+      background-color: white;
+      color: #0070C0;
+      padding: 10px;
+      font-size: 18px;
+      border: 2px solid #0070C0;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      display: block;
+      margin: 20px auto;
+    }
+    
+    .section-title {
+  text-align: center;
+  background-color: white;
+  color: #0070C0;
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #0070C0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  display: block;
+  margin: 20px auto;
+}
+
+
+    .nav-button:hover {
+      background-color: #0070C0;
+      color: white;
+    }
+
+    .parent-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .image-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      justify-items: center;
+      align-items: center;
+    }
+
+    .image-container img {
+      width: 100%;
+      max-width: 180px;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+      border: 2px solid white;
+      transition: 0.3s;
+    }
+
+    .image-container img:hover {
+      transform: scale(1.05);
+    }
+
+    .view-more-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .view-more-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    #lightbox-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #lightbox-container {
+      position: relative;
+      max-width: 80%;
+      max-height: 80vh;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #lightbox-image {
+      max-width: 100%;
+      max-height: 80vh;
+      display: block;
+      margin: auto;
+      border-radius: 10px;
+      border: 4px solid white;
+    }
+
+    .next,
+    .prev {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      cursor: pointer;
+      border: none;
+    }
+
+    .next { right: 10px; }
+    .prev { left: 10px; }
+
+    footer {
+      text-align: center;
+      color: white;
+      background-color: #36454F;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER SECTION -->
+  <header>
+    <img src="F_logo_dcs.cs.Model.1.jpg" alt="Logo">
+    <nav>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="About us.html">About us</a>
+        <a href="Services.html">Services</a>
+        <a href="Contact us.html">Contact us</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a>
+        <a href="About us.html">About us</a>
+        <a href="Services.html">Services</a>
+        <a href="Contact us.html">Contact us</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="main-title">
+    <h1>DESAI CiviSurv</h1>
+    <h2>Consulting Civil Engineer's & Surveyor's</h2>
+  </div>
+
+  <div class="description">
+    <p>A Civil Engineer designs, builds, and maintains infrastructure projects and systems...</p>
+    <p>A Surveyor measures and maps the Earth's physical features using specialized tools...</p>
+    <a href="https://en.wikipedia.org/wiki/Civil_engineering" class="read-more">Read More</a>
+  </div>
+
+  <div class="marquee-container">
+    <p class="marquee-text">"Success is not the key to happiness. Happiness is the key to success."</p>
+  </div>
+
+  <button class="nav-button" onclick="window.open('Maps.html', '_blank')">MAPS OF SURVEY</button>
+
+  <!-- LIVE PICTURES -->
+  <h2 class="section-title">Live Pictures of Survey</h2>
+  <div class="parent-container">
+    <div class="image-container">
+      <img src="images/abhi7.jpeg" onclick="openModal(0)">
+      <img src="images/abhi2.jpeg" onclick="openModal(1)">
+      <img src="images/abhi6.jpeg" onclick="openModal(2)">
+      <img src="images/abhi4.jpeg" onclick="openModal(3)">
+    </div>
+    <div id="more-images" class="image-container hidden">
+      <img src="images/abhi5.jpeg" onclick="openModal(4)">
+      <img src="images/abhi3.jpeg" onclick="openModal(5)">
+      <img src="images/abhi1.jpeg" onclick="openModal(6)">
+      <img src="images/abhi8.jpeg" onclick="openModal(7)">
+      <img src="images/abhi9.jpeg" onclick="openModal(8)">
+      <img src="images/abhi10.jpeg" onclick="openModal(9)">
+      <img src="images/abhi11.jpeg" onclick="openModal(10)">
+      <img src="images/abhi12.jpeg" onclick="openModal(11)">
+      <img src="images/abhi13.jpeg" onclick="openModal(12)">
+      <img src="images/abhi14.jpeg" onclick="openModal(13)">
+      <img src="images/abhi15.jpeg" onclick="openModal(14)">
+      <img src="images/abhi16.jpeg" onclick="openModal(15)">
+    </div>
+    <button class="view-more-btn" onclick="toggleImages()">View More</button>
+  </div>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox-modal" onclick="closeModal(event)">
+    <div id="lightbox-container">
+      <span class="prev" onclick="changeImage(-1)">❮</span>
+      <img id="lightbox-image" src="">
+      <span class="next" onclick="changeImage(1)">❯</span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2023 DESAI CiviSurv. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JS SCRIPTS -->
+  <script>
+    function toggleMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    function toggleImages() {
+      const moreImages = document.getElementById("more-images");
+      const button = document.querySelector(".view-more-btn");
+      moreImages.classList.toggle("hidden");
+      button.textContent = moreImages.classList.contains("hidden") ? "View More" : "View Less";
+    }
+
+    let currentIndex = 0;
+    const images = [
+      "images/abhi7.jpeg", "images/abhi2.jpeg", "images/abhi6.jpeg", "images/abhi4.jpeg",
+      "images/abhi5.jpeg", "images/abhi3.jpeg", "images/abhi1.jpeg", "images/abhi8.jpeg",
+      "images/abhi9.jpeg", "images/abhi10.jpeg", "images/abhi11.jpeg", "images/abhi12.jpeg",
+      "images/abhi13.jpeg", "images/abhi14.jpeg", "images/abhi15.jpeg", "images/abhi16.jpeg"
+    ];
+
+    function openModal(index) {
+      currentIndex = index;
+      document.getElementById("lightbox-image").src = images[currentIndex];
+      document.getElementById("lightbox-modal").style.display = "flex";
+    }
+
+    function closeModal(event) {
+      if (!document.getElementById("lightbox-image").contains(event.target)) {
+        document.getElementById("lightbox-modal").style.display = "none";
+      }
+    }
+
+    function changeImage(direction) {
+      currentIndex = (currentIndex + direction + images.length) % images.length;
+      document.getElementById("lightbox-image").src = images[currentIndex];
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        document.getElementById("lightbox-modal").style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
